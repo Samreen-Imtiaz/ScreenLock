@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test.screenlocker.com.myapplication.utils.PagerEnabledSlidingPaneLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/sliding_pane_layout"
+    android:layout_height="match_parent">
+
+    <fragment
+        android:id="@+id/profile_tab"
+        android:name="test.screenlocker.com.myapplication.fragments.SlideTabFragment"
+        android:layout_width="280dp"
+        android:layout_height="match_parent"
+        tools:layout="@layout/fragment_profile_tab" />
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff">
+
+            <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/fragmentContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                 />
+
+        </RelativeLayout>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+
+</test.screenlocker.com.myapplication.utils.PagerEnabledSlidingPaneLayout>
