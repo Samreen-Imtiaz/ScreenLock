@@ -23,9 +23,6 @@ public class FAQ extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.faq, container, false);
-
-
-        // Inflate the layout for this fragment
         return rootView;
     }
 
