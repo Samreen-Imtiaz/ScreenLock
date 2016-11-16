@@ -11,7 +11,6 @@ import android.view.ViewGroup;
 public class FAQ extends Fragment {
 
     public FAQ() {
-        // Required empty public constructor
     }
 
     @Override
