@@ -34,4 +34,13 @@
     <dimen name="text_20">20sp</dimen>
     <dimen name="text_22">22sp</dimen>
     <dimen name="text_25">25sp</dimen>
+
+
+    <dimen name="screen_edge_horizontal_margin">16dp</dimen>
+    <dimen name="screen_edge_vertical_margin">16dp</dimen>
+    <dimen name="horizontal_divider_height">1dp</dimen>
 </resources>
+
+
+
+
