@@ -2,6 +2,7 @@ package test.screenlocker.com.myapplication;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -10,6 +11,8 @@ import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+
+import test.screenlocker.com.myapplication.PatternLock.PatternLockActivity;
 
 
 public class UnlockPattern extends Activity {
@@ -28,10 +31,9 @@ public class UnlockPattern extends Activity {
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-                //  Intent intent = new Intent();
-             //   Intent i = new Intent(UnlockPattern.this, PatternLockActivity.class);
-             //   startActivity(i);
-              //  finish();
+                Intent i = new Intent(UnlockPattern.this, PatternLockActivity.class);
+                startActivity(i);
+                finish();
             }
         });
     }

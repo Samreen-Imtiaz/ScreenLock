@@ -18,9 +18,8 @@ import test.screenlocker.com.myapplication.utils.ToastUtils;
 
 public class ResetPatternActivity extends ThemedAppCompatActivity {
 
-    @BindView(R.id.ok_button)
+
     Button mOkButton;
-    @BindView(R.id.cancel_button)
     Button mCancelButton;
 
     @Override
@@ -28,7 +27,8 @@ public class ResetPatternActivity extends ThemedAppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.reset_pattern_activity);
-        ButterKnife.bind(this);
+        mOkButton = (Button) findViewById(R.id.ok_button);
+        mCancelButton = (Button) findViewById(R.id.cancel_button);
 
         mOkButton.setOnClickListener(new View.OnClickListener() {
             @Override
