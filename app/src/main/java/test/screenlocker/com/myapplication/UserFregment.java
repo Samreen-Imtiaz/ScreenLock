@@ -1,6 +1,5 @@
 package test.screenlocker.com.myapplication;
 
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
@@ -55,6 +54,7 @@ public class UserFregment extends Fragment {
         heading = (TextView) view.findViewById(R.id.textview);
         etPhoneNumber.setText(PreferencesHandler.getStringPreferences(PreferencesConstants.phone));
         etEmailAddrss.setText(PreferencesHandler.getStringPreferences(PreferencesConstants.email));
+
         heading.setText("User Profile");
         mSlidingLayout = (SlidingPaneLayout) getActivity().findViewById(R.id.sliding_pane_layout);
         mSlidingLayout.setPanelSlideListener(SliderListener.getInstance(getActivity()));

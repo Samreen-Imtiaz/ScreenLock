@@ -2,7 +2,6 @@ package test.screenlocker.com.myapplication;
 
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -41,7 +40,7 @@ public class User_slide extends Activity {
         }, SPLASH_TIME_OUT); */
 
         ////////////////////////////////////////////////////////////
-        pref = getSharedPreferences(mypreference,
+     /*   pref = getSharedPreferences(mypreference,
                 Context.MODE_PRIVATE);
         if (pref.contains(Number)) {
             etPhoneNumber.setText(pref.getString(Number, ""));
@@ -49,7 +48,7 @@ public class User_slide extends Activity {
         if (pref.contains(Email)) {
             etEmailAddrss.setText(pref.getString(Email, ""));
 
-        }
+        }*/
         ////////////////////////////////////////////////////////////
 
         etEmailAddrss= (EditText) findViewById(R.id.editText7);
@@ -70,7 +69,7 @@ public class User_slide extends Activity {
             public void onTextChanged(CharSequence s, int start, int before, int count){}
         });
 
-        btnskip = (Button) findViewById(R.id.button3);
+        btnskip = (Button) findViewById(R.id.button5);
         btnskip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
