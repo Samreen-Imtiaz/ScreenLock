@@ -11,6 +11,7 @@ import android.support.v4.app.NotificationCompat;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.preference.PreferenceManager;
 import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -30,7 +31,10 @@ public class WelcomeActivity extends AppCompatActivity {
     private int[] layouts;
     private Button btnSkip, btnNext;
     private PrefManager prefManager;
-    SharedPreferences pref;
+    SharedPreferences prefs;
+    String sharedPrefId     = "MyAppPreference";
+    boolean isRegistered  ;
+
 
     private Handler handler = new Handler()
     {
@@ -132,26 +136,27 @@ public class WelcomeActivity extends AppCompatActivity {
     }
 
     private void launchHomeScreen() {
-       prefManager.setFirstTimeLaunch(false);
-           startActivity(new Intent(WelcomeActivity.this, User_slide.class));
+      // prefManager.setFirstTimeLaunch(false);
+       //    startActivity(new Intent(WelcomeActivity.this, User_slide.class));
+       //    finish();
+
+
+      sharedPrefId     = "MyAppPreference";
+      prefs = getSharedPreferences(sharedPrefId, 0);
+        prefs = PreferenceManager.getDefaultSharedPreferences(WelcomeActivity.this);
+
+      isRegistered      = prefs.getBoolean("isRegistered ", false);
+       if(isRegistered )
+      {
+    startActivity(new Intent(WelcomeActivity.this, MainActivity.class));
            finish();
-          // handler.sendEmptyMessageDelayed(0, 3000);
+      }
+    else
+     {
+    startActivity(new Intent(WelcomeActivity.this, User_slide.class));
+           finish();
+}
 
-     /*   if(!pref.getBoolean("first_time", false))
-        {
-            SharedPreferences.Editor editor = pref.edit();
-            editor.putBoolean("first_time", true);
-            editor.commit();
-            Intent i = new Intent(WelcomeActivity.this, User_slide.class);
-            this.startActivity(i);
-            this.finish();
-        }
-
-        else
-        {
-            handler.sendEmptyMessageDelayed(0, 3000);
-        }
-*/
     }
 
     //  viewpager change listener

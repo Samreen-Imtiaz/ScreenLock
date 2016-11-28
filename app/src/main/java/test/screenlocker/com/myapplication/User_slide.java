@@ -18,7 +18,7 @@ public class User_slide extends Activity {
     private EditText etPhoneNumber;
     private Button btnSubmit, btnskip;
 
-    SharedPreferences pref;
+    SharedPreferences prefs;
     public static final String mypreference = "mypref";
     public static final String Number = "numberKey";
     public static final String Email = "emailKey";
@@ -29,15 +29,6 @@ public class User_slide extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.user_slide);
 
-      /*  new Handler().postDelayed(new Runnable() {
-
-            @Override
-            public void run() {
-                Intent i = new Intent(User_slide.this, MainActivity.class);
-                startActivity(i);
-                finish();
-            }
-        }, SPLASH_TIME_OUT); */
 
         ////////////////////////////////////////////////////////////
      /*   pref = getSharedPreferences(mypreference,
@@ -93,6 +84,7 @@ public class User_slide extends Activity {
                     editor.putString(Number, n);
                     editor.putString(Email, e);
                     editor.commit();*/
+                    prefs.edit().putBoolean("isRegistered", true).commit();
                     //////////////////////////////////////
                     submitForm();
                     startActivity(new Intent(User_slide.this, MainActivity.class));

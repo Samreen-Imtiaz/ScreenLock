@@ -8,7 +8,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.roughike.bottombar.BottomBar;
-import com.roughike.bottombar.BottomBarBadge;
 import com.roughike.bottombar.BottomBarFragment;
 import com.roughike.bottombar.OnTabSelectedListener;
 
@@ -58,9 +57,9 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
         });
 
         // Make a Badge for the first tab, with red background color and a value of "4".
-        BottomBarBadge unreadMessages = bottomBar.makeBadgeForTabAt(1, "#E91E63", 4);
-        unreadMessages.show();
-        unreadMessages.setAnimationDuration(200);
+       // BottomBarBadge unreadMessages = bottomBar.makeBadgeForTabAt(1, "#E91E63", 4);
+      //  unreadMessages.show();
+      //  unreadMessages.setAnimationDuration(200);
 
 
         ////////////////////////////////////////////////////////////////////////////////////////
