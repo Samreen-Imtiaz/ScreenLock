@@ -2,7 +2,6 @@ package test.screenlocker.com.myapplication;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
@@ -11,7 +10,6 @@ import android.support.v4.app.NotificationCompat;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.preference.PreferenceManager;
 import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,6 +20,8 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import test.screenlocker.com.myapplication.utils.PreferencesHandler;
+
 public class WelcomeActivity extends AppCompatActivity {
 
     private ViewPager viewPager;
@@ -31,9 +31,9 @@ public class WelcomeActivity extends AppCompatActivity {
     private int[] layouts;
     private Button btnSkip, btnNext;
     private PrefManager prefManager;
-    SharedPreferences prefs;
+    PreferencesHandler prefs;
     String sharedPrefId     = "MyAppPreference";
-    boolean isRegistered  ;
+    boolean isRegistered;
 
 
     private Handler handler = new Handler()
@@ -136,16 +136,17 @@ public class WelcomeActivity extends AppCompatActivity {
     }
 
     private void launchHomeScreen() {
-      // prefManager.setFirstTimeLaunch(false);
-       //    startActivity(new Intent(WelcomeActivity.this, User_slide.class));
-       //    finish();
+       prefManager.setFirstTimeLaunch(false);
+         //  startActivity(new Intent(WelcomeActivity.this, User_slide.class));
+         //  finish();
+
+     //sharedPrefId= "MyAppPreference";
+    // prefs = getSharedPreferences(sharedPrefId, 0);
+       // prefs = PreferenceManager.getDefaultSharedPreferences(WelcomeActivity.this);
 
 
-      sharedPrefId     = "MyAppPreference";
-      prefs = getSharedPreferences(sharedPrefId, 0);
-        prefs = PreferenceManager.getDefaultSharedPreferences(WelcomeActivity.this);
 
-      isRegistered      = prefs.getBoolean("isRegistered ", false);
+      isRegistered= prefs.getBooleanPreferences("isRegistered ");
        if(isRegistered )
       {
     startActivity(new Intent(WelcomeActivity.this, MainActivity.class));

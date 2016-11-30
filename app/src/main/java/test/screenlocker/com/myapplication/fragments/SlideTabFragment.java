@@ -23,7 +23,7 @@ public class SlideTabFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         rootView = inflater.inflate(R.layout.fragment_profile_tab, container, false);
-          t1=(TextView) rootView.findViewById(R.id.set);
+        t1=(TextView) rootView.findViewById(R.id.set);
         t2=(TextView) rootView.findViewById(R.id.man);
         t3=(TextView) rootView.findViewById(R.id.pref);
         t4=(TextView) rootView.findViewById(R.id.FAQ);

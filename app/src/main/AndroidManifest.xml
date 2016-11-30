@@ -4,6 +4,7 @@
     package="test.screenlocker.com.myapplication">
 
     <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <application
         android:name=".LocKAppApplicaton"
         android:allowBackup="true"

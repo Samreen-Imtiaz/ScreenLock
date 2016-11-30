@@ -3,7 +3,6 @@ package test.screenlocker.com.myapplication;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -12,37 +11,26 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import test.screenlocker.com.myapplication.utils.PreferencesConstants;
+import test.screenlocker.com.myapplication.utils.PreferencesHandler;
+
 public class User_slide extends Activity {
 
     private EditText etEmailAddrss;
     private EditText etPhoneNumber;
     private Button btnSubmit, btnskip;
 
-    SharedPreferences prefs;
-    public static final String mypreference = "mypref";
-    public static final String Number = "numberKey";
-    public static final String Email = "emailKey";
+    PreferencesHandler prefs;
 
-    private static int SPLASH_TIME_OUT = 3000;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.user_slide);
+        prefs.updatePreferences("isRegistered ",true);
 
-
-        ////////////////////////////////////////////////////////////
-     /*   pref = getSharedPreferences(mypreference,
-                Context.MODE_PRIVATE);
-        if (pref.contains(Number)) {
-            etPhoneNumber.setText(pref.getString(Number, ""));
-        }
-        if (pref.contains(Email)) {
-            etEmailAddrss.setText(pref.getString(Email, ""));
-
-        }*/
-        ////////////////////////////////////////////////////////////
 
         etEmailAddrss= (EditText) findViewById(R.id.editText7);
+        etEmailAddrss.setText(PreferencesHandler.getStringPreferences(PreferencesConstants.email));
         etEmailAddrss.addTextChangedListener(new TextWatcher() {
             public void afterTextChanged(Editable s) {
                 Validate_profile.isEmailAddress(etEmailAddrss, true);
@@ -52,6 +40,7 @@ public class User_slide extends Activity {
         });
 
         etPhoneNumber= (EditText) findViewById(R.id.editText6);
+        etPhoneNumber.setText(PreferencesHandler.getStringPreferences(PreferencesConstants.phone));
         etPhoneNumber.addTextChangedListener(new TextWatcher() {
             public void afterTextChanged(Editable s) {
                 Validate_profile.isPhoneNumber(etPhoneNumber, false);
@@ -77,15 +66,6 @@ public class User_slide extends Activity {
 
                 if ( checkValidation () )
                 {
-                    ////////////////////////////////////////////////////////
-                /*   String n = etPhoneNumber.getText().toString();
-                    String e = etEmailAddrss.getText().toString();
-                    SharedPreferences.Editor editor = pref.edit();
-                    editor.putString(Number, n);
-                    editor.putString(Email, e);
-                    editor.commit();*/
-                    prefs.edit().putBoolean("isRegistered", true).commit();
-                    //////////////////////////////////////
                     submitForm();
                     startActivity(new Intent(User_slide.this, MainActivity.class));
                     finish();
@@ -98,7 +78,10 @@ public class User_slide extends Activity {
 
     }
     private void submitForm() {
-         Toast.makeText(this, "Profile Created!", Toast.LENGTH_LONG).show();
+        PreferencesHandler.updatePreferences(PreferencesConstants.email, etEmailAddrss.getText().toString().trim());
+        PreferencesHandler.updatePreferences(PreferencesConstants.phone, etPhoneNumber.getText().toString().trim());
+
+        Toast.makeText(this, "Profile Created!", Toast.LENGTH_LONG).show();
     }
 
     private boolean checkValidation() {

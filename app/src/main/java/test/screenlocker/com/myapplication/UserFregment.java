@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.SlidingPaneLayout;
-import android.support.v7.app.AlertDialog;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
@@ -23,12 +22,12 @@ import test.screenlocker.com.myapplication.utils.PreferencesHandler;
 public class UserFregment extends Fragment {
     private EditText etEmailAddrss;
     private EditText etPhoneNumber;
-    private Button btnSubmit, btnclear;
+    private Button btnSubmit, btnclear, btnimage;
     TextView heading;
     View view;
     SlidingPaneLayout mSlidingLayout;
     ImageButton slidingPaneButton;
-
+    private  static  final int SELECTED_PICTURE=1;
     public UserFregment() {
     }
 
@@ -43,7 +42,7 @@ public class UserFregment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_user, container, false);
        if(etEmailAddrss==null && etPhoneNumber==null) {
-           new AlertDialog.Builder(getActivity()).setTitle("Alert!").setMessage("Insert Phone number and Email ID.").setIcon(R.drawable.icon).setNeutralButton("OK", null).show();
+        //   new AlertDialog.Builder(getActivity()).setTitle("Alert!").setMessage("Insert Phone number and Email ID.").setIcon(R.drawable.icon).setNeutralButton("OK", null).show();
        }
         initView();
         setListeners();
@@ -55,7 +54,9 @@ public class UserFregment extends Fragment {
         etEmailAddrss = (EditText) view.findViewById(R.id.editText5);
         btnclear = (Button) view.findViewById(R.id.button3);
         btnSubmit = (Button) view.findViewById(R.id.button2);
+        btnimage = (Button) view.findViewById(R.id.image);
         heading = (TextView) view.findViewById(R.id.textview);
+
         etPhoneNumber.setText(PreferencesHandler.getStringPreferences(PreferencesConstants.phone));
         etEmailAddrss.setText(PreferencesHandler.getStringPreferences(PreferencesConstants.email));
 
@@ -118,6 +119,38 @@ public class UserFregment extends Fragment {
                 mSlidingLayout.openPane();
             }
         });
+
+     /*   btnimage.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+               startActivityForResult(i, SELECTED_PICTURE);
+            }
+         public void   onActivtyResult( int requestCode, int resultCode, Intent data)
+            {
+            UserFregment.super.onActivityResult( requestCode,  resultCode, data);
+                switch (requestCode)
+                {
+                    case SELECTED_PICTURE:
+                        if(requestCode==RESULT_OK)
+                        {
+                            Uri uri=data.getData();
+                            String[] projection={MediaStore.Images.Media.DATA};
+                            Cursor cursor= getContentResolver().query(uri, projection, null, null, null);
+                            cursor.moveToFirst();
+                            int columnIndex=cursor.getColumnIndex(projection[0]);
+                            String filePath=cursor.getString(columnIndex);
+                            cursor.close();
+                            Bitmap yourSelectedImage= BitmapFactory.decodeFile(filePath);
+                            Drawable d=new BitmapDrawable(yourSelectedImage);
+                        }
+                        break;
+                    default:
+                        break;
+                }
+            }
+        });*/
     }
 
     private void submitForm() {
