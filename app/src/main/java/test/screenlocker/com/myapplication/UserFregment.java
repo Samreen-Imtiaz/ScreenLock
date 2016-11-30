@@ -1,10 +1,10 @@
 package test.screenlocker.com.myapplication;
 
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.SlidingPaneLayout;
+import android.support.v7.app.AlertDialog;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
@@ -42,6 +42,9 @@ public class UserFregment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_user, container, false);
+       if(etEmailAddrss==null && etPhoneNumber==null) {
+           new AlertDialog.Builder(getActivity()).setTitle("Alert!").setMessage("Insert Phone number and Email ID.").setIcon(R.drawable.icon).setNeutralButton("OK", null).show();
+       }
         initView();
         setListeners();
         return view;
@@ -55,6 +58,7 @@ public class UserFregment extends Fragment {
         heading = (TextView) view.findViewById(R.id.textview);
         etPhoneNumber.setText(PreferencesHandler.getStringPreferences(PreferencesConstants.phone));
         etEmailAddrss.setText(PreferencesHandler.getStringPreferences(PreferencesConstants.email));
+
         heading.setText("User Profile");
         mSlidingLayout = (SlidingPaneLayout) getActivity().findViewById(R.id.sliding_pane_layout);
         mSlidingLayout.setPanelSlideListener(SliderListener.getInstance(getActivity()));

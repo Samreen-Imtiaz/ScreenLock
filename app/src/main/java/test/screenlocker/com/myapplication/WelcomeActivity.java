@@ -1,22 +1,26 @@
 package test.screenlocker.com.myapplication;
 
-        import android.content.Context;
-        import android.content.Intent;
-        import android.graphics.Color;
-        import android.os.Build;
-        import android.os.Bundle;
-        import android.support.v4.view.PagerAdapter;
-        import android.support.v4.view.ViewPager;
-        import android.support.v7.app.AppCompatActivity;
-        import android.text.Html;
-        import android.view.LayoutInflater;
-        import android.view.View;
-        import android.view.ViewGroup;
-        import android.view.Window;
-        import android.view.WindowManager;
-        import android.widget.Button;
-        import android.widget.LinearLayout;
-        import android.widget.TextView;
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.Color;
+import android.os.Build;
+import android.os.Bundle;
+import android.os.Handler;
+import android.support.v4.app.NotificationCompat;
+import android.support.v4.view.PagerAdapter;
+import android.support.v4.view.ViewPager;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.preference.PreferenceManager;
+import android.text.Html;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 public class WelcomeActivity extends AppCompatActivity {
 
@@ -27,6 +31,20 @@ public class WelcomeActivity extends AppCompatActivity {
     private int[] layouts;
     private Button btnSkip, btnNext;
     private PrefManager prefManager;
+    SharedPreferences prefs;
+    String sharedPrefId     = "MyAppPreference";
+    boolean isRegistered  ;
+
+
+    private Handler handler = new Handler()
+    {
+        public void handleMessage(NotificationCompat.MessagingStyle.Message msg)
+        {
+            Intent i = new Intent(WelcomeActivity.this, MainActivity.class);
+            WelcomeActivity.this.startActivity(i);
+            finish();
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -118,9 +136,27 @@ public class WelcomeActivity extends AppCompatActivity {
     }
 
     private void launchHomeScreen() {
-        prefManager.setFirstTimeLaunch(false);
-        startActivity(new Intent(WelcomeActivity.this, MainActivity.class));
-        finish();
+      // prefManager.setFirstTimeLaunch(false);
+       //    startActivity(new Intent(WelcomeActivity.this, User_slide.class));
+       //    finish();
+
+
+      sharedPrefId     = "MyAppPreference";
+      prefs = getSharedPreferences(sharedPrefId, 0);
+        prefs = PreferenceManager.getDefaultSharedPreferences(WelcomeActivity.this);
+
+      isRegistered      = prefs.getBoolean("isRegistered ", false);
+       if(isRegistered )
+      {
+    startActivity(new Intent(WelcomeActivity.this, MainActivity.class));
+           finish();
+      }
+    else
+     {
+    startActivity(new Intent(WelcomeActivity.this, User_slide.class));
+           finish();
+}
+
     }
 
     //  viewpager change listener

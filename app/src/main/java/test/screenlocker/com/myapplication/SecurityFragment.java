@@ -4,14 +4,20 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
+import android.support.v4.widget.SlidingPaneLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.TabHost;
 import android.widget.TabWidget;
+import android.widget.TextView;
 
 import java.util.ArrayList;
+
+import test.screenlocker.com.myapplication.listener.SliderListener;
 
 public class SecurityFragment extends Fragment
 {
@@ -19,6 +25,9 @@ public class SecurityFragment extends Fragment
     private TabHost mTabHost;
     private ViewPager mViewPager;
     private TabsAdapter mTabsAdapter;
+    TextView heading;
+    SlidingPaneLayout mSlidingLayout;
+    ImageButton slidingPaneButton;
 
     public SecurityFragment() {
     }
@@ -41,6 +50,20 @@ public class SecurityFragment extends Fragment
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_security, container, false);
+        heading = (TextView) v.findViewById(R.id.textview);
+        heading.setText("Security");
+        mSlidingLayout = (SlidingPaneLayout) getActivity().findViewById(R.id.sliding_pane_layout);
+        mSlidingLayout.setPanelSlideListener(SliderListener.getInstance(getActivity()));
+        slidingPaneButton = (ImageButton) v.findViewById(R.id.left_button_header);
+        slidingPaneButton.setVisibility(View.VISIBLE);
+        slidingPaneButton.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.top_left_menu_icon));
+        slidingPaneButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mSlidingLayout.openPane();
+            }
+        });
+
 
         mTabHost = (TabHost) v.findViewById(android.R.id.tabhost);
         mTabHost.setup();

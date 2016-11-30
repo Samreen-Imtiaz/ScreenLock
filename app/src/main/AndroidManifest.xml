@@ -7,20 +7,25 @@
     <application
         android:name=".LocKAppApplicaton"
         android:allowBackup="true"
-        android:icon="@mipmap/iconapp"
+        android:icon="@drawable/lockicon"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/MyMaterialTheme"
         tools:replace="allowBackup">
         <activity android:name=".MainActivity"></activity>
 
+        <activity android:name=".Splash"
+            android:screenOrientation="portrait"
+            >
+
+        </activity>
         <activity android:name=".WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
+    </activity>
         <activity android:name=".User_slide"></activity>
 
 
