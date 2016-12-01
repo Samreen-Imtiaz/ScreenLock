@@ -1,33 +1,50 @@
 package test.screenlocker.com.myapplication;
 
+import android.content.Intent;
+import android.database.Cursor;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.ParcelFileDescriptor;
+import android.provider.MediaStore;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.SlidingPaneLayout;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Base64;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.io.ByteArrayOutputStream;
+import java.io.FileDescriptor;
+import java.io.IOException;
 
 import test.screenlocker.com.myapplication.listener.SliderListener;
 import test.screenlocker.com.myapplication.utils.PreferencesConstants;
 import test.screenlocker.com.myapplication.utils.PreferencesHandler;
 
+import static android.app.Activity.RESULT_OK;
+
 public class UserFregment extends Fragment {
     private EditText etEmailAddrss;
     private EditText etPhoneNumber;
-    private Button btnSubmit, btnclear, btnimage;
+    private Button btnSubmit, btnclear,btnImage;
     TextView heading;
     View view;
     SlidingPaneLayout mSlidingLayout;
     ImageButton slidingPaneButton;
-    private  static  final int SELECTED_PICTURE=1;
+    ImageView imageView;
+    private static int RESULT_LOAD_IMAGE = 1;
     public UserFregment() {
     }
 
@@ -46,6 +63,7 @@ public class UserFregment extends Fragment {
        }
         initView();
         setListeners();
+
         return view;
     }
 
@@ -54,7 +72,8 @@ public class UserFregment extends Fragment {
         etEmailAddrss = (EditText) view.findViewById(R.id.editText5);
         btnclear = (Button) view.findViewById(R.id.button3);
         btnSubmit = (Button) view.findViewById(R.id.button2);
-        btnimage = (Button) view.findViewById(R.id.image);
+       imageView = (ImageView) view.findViewById(R.id.imageView2);
+        btnImage = (Button) view.findViewById(R.id.image);
         heading = (TextView) view.findViewById(R.id.textview);
 
         etPhoneNumber.setText(PreferencesHandler.getStringPreferences(PreferencesConstants.phone));
@@ -120,37 +139,20 @@ public class UserFregment extends Fragment {
             }
         });
 
-     /*   btnimage.setOnClickListener(new View.OnClickListener() {
+      btnImage.setOnClickListener(new View.OnClickListener() {
 
             @Override
-            public void onClick(View view) {
-                Intent i=new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-               startActivityForResult(i, SELECTED_PICTURE);
+            public void onClick(View arg0) {
+
+                Intent i = new Intent(
+                        Intent.ACTION_PICK,
+                        android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+
+                startActivityForResult(i, RESULT_LOAD_IMAGE);
             }
-         public void   onActivtyResult( int requestCode, int resultCode, Intent data)
-            {
-            UserFregment.super.onActivityResult( requestCode,  resultCode, data);
-                switch (requestCode)
-                {
-                    case SELECTED_PICTURE:
-                        if(requestCode==RESULT_OK)
-                        {
-                            Uri uri=data.getData();
-                            String[] projection={MediaStore.Images.Media.DATA};
-                            Cursor cursor= getContentResolver().query(uri, projection, null, null, null);
-                            cursor.moveToFirst();
-                            int columnIndex=cursor.getColumnIndex(projection[0]);
-                            String filePath=cursor.getString(columnIndex);
-                            cursor.close();
-                            Bitmap yourSelectedImage= BitmapFactory.decodeFile(filePath);
-                            Drawable d=new BitmapDrawable(yourSelectedImage);
-                        }
-                        break;
-                    default:
-                        break;
-                }
-            }
-        });*/
+
+        });
+
     }
 
     private void submitForm() {
@@ -169,4 +171,65 @@ public class UserFregment extends Fragment {
 
         return ret;
     }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data){
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == RESULT_LOAD_IMAGE && resultCode == RESULT_OK && null != data) {
+            Uri selectedImage = data.getData();
+            String[] filePathColumn = {MediaStore.Images.Media.DATA};
+
+            Cursor cursor = getActivity().getApplicationContext().getContentResolver().query(selectedImage,
+                    filePathColumn, null, null, null);
+            cursor.moveToFirst();
+
+            int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
+            String picturePath = cursor.getString(columnIndex);
+            cursor.close();
+
+            Bitmap bmp = null;
+            try {
+                bmp = getBitmapFromUri(selectedImage);
+            } catch (IOException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+            imageView.setImageBitmap(bmp);
+            //      prefs.updatePreferences("RESULT_LOAD_IMAGE", encodeTobase64(btmap));
+
+        }
+
+    }
+
+    public static String encodeTobase64(Bitmap image)
+    {
+        Bitmap immage = image;
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        immage.compress(Bitmap.CompressFormat.PNG, 100, baos);
+        byte[] b = baos.toByteArray();
+        String imageEncoded = Base64.encodeToString(b, Base64.DEFAULT);
+
+        Log.d("Image Log:", imageEncoded);
+        return imageEncoded;
+
+    }
+    public static Bitmap decodeBase64(String input)
+    {
+        byte[] decodedByte = Base64.decode(input, 0);
+        return BitmapFactory
+                .decodeByteArray(decodedByte, 0, decodedByte.length);
+    }
+
+
+    private Bitmap getBitmapFromUri(Uri uri) throws IOException {
+        ParcelFileDescriptor parcelFileDescriptor =
+                getActivity().getApplicationContext().getContentResolver().openFileDescriptor(uri, "r");
+        FileDescriptor fileDescriptor = parcelFileDescriptor.getFileDescriptor();
+        Bitmap image = BitmapFactory.decodeFileDescriptor(fileDescriptor);
+        parcelFileDescriptor.close();
+        return image;
+    }
+
+
 }

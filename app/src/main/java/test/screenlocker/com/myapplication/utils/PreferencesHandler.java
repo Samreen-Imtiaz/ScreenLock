@@ -4,10 +4,6 @@ package test.screenlocker.com.myapplication.utils;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-
-/**
- * Created by Alee on 11/7/2016..
- */
 public class PreferencesHandler {
 
     public static final String FILE_NAME_SHARED_PREF = "lockapp.xml";
