@@ -22,14 +22,14 @@
             android:layout_centerHorizontal="true"
             android:textColor="@color/white"
             android:layout_marginBottom="@dimen/margin_left_15"
-            android:text="Andy the bot" />
+            android:text="Lock Security!" />
 
         <cn.gavinliu.android.lib.shapedimageview.ShapedImageView
             android:id="@+id/imageView2"
             android:layout_width="100dp"
             android:layout_height="100dp"
             app:shape_mode="circle"
-            android:src="@mipmap/ic_launcher"
+            android:src="@drawable/ic_action_user"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true" />
     </RelativeLayout>
