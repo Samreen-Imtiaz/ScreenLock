@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary">
+    android:background="@color/border_grey">
 
 
 <!--
@@ -38,7 +38,7 @@
             android:textSize="@dimen/slide_desc" />
 
     </LinearLayout> -->
-    <TextView
+  <!--  <TextView
             android:text="Number:"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -52,31 +52,21 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="150dp"
             android:id="@+id/textView5" />
+-->
 
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="phone"
-            android:ems="10"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="37dp"
-            android:layout_marginTop="150dp"
-            android:id="@+id/editText6" />
-
-    <TextView
-        android:text="Email:"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textStyle="bold"
-        android:textSize="20sp"
-        android:textColor="@color/white"
-        android:layout_marginTop="30dp"
-        android:id="@+id/textView6"
-        android:layout_below="@+id/editText6"
-        android:layout_alignStart="@+id/textView5" />
+    <!--<TextView
+    android:text="Email:"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textAppearance="?android:attr/textAppearanceMedium"
+    android:textStyle="bold"
+    android:textSize="20sp"
+    android:textColor="@color/white"
+    android:layout_marginTop="30dp"
+    android:id="@+id/textView6"
+    android:layout_below="@+id/editText6"
+    android:layout_alignStart="@+id/textView5" />
+-->
 
     <Button
         android:text="Save"
@@ -85,20 +75,34 @@
         android:id="@+id/button4"
         android:textColor="@color/white"
         android:textStyle="bold"
-        android:layout_below="@+id/textView6"
-        android:layout_toStartOf="@+id/editText6"
-        android:layout_marginEnd="11dp"
-        android:layout_marginTop="39dp" />
+        android:layout_marginTop="108dp"
+        android:layout_marginLeft="70dp"
+        android:layout_below="@+id/editText6"
+        />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:gravity="center_horizontal"
+        android:text="User Profile!"
+        android:textColor="@color/white"
+        android:layout_marginBottom="49dp"
+        android:layout_alignBottom="@+id/editText6"
+        android:layout_alignParentStart="true" />
 
     <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="textEmailAddress"
-            android:ems="10"
-            android:id="@+id/editText7"
-        android:layout_alignBaseline="@+id/textView6"
-        android:layout_alignBottom="@+id/textView6"
-        android:layout_alignStart="@+id/editText6" />
+        android:text="Number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:ems="10"
+        android:textColor="@color/white"
+        android:background="@drawable/bg_edittext"
+        android:layout_marginTop="150dp"
+        android:id="@+id/editText6"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:text="Skip"
@@ -107,19 +111,22 @@
         android:id="@+id/button5"
         android:textColor="@color/white"
         android:textStyle="bold"
+        android:layout_marginStart="36dp"
         android:layout_alignBaseline="@+id/button4"
         android:layout_alignBottom="@+id/button4"
-        android:layout_centerHorizontal="true" />
+        android:layout_toEndOf="@+id/button4" />
 
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textSize="30dp"
+    <EditText
+        android:text="Email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:ems="10"
         android:textColor="@color/white"
-        android:gravity="center_horizontal"
-        android:text="User Profile!"
-        android:layout_alignBottom="@+id/textView5"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="53dp" />
+        android:background="@drawable/bg_edittext"
+            android:id="@+id/editText7"
+        android:layout_marginBottom="41dp"
+        android:layout_above="@+id/button5"
+        android:layout_alignStart="@+id/editText6" />
 
 </RelativeLayout>

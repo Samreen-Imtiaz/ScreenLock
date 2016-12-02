@@ -137,14 +137,6 @@ public class WelcomeActivity extends AppCompatActivity {
 
     private void launchHomeScreen() {
        prefManager.setFirstTimeLaunch(false);
-         //  startActivity(new Intent(WelcomeActivity.this, User_slide.class));
-         //  finish();
-
-     //sharedPrefId= "MyAppPreference";
-    // prefs = getSharedPreferences(sharedPrefId, 0);
-       // prefs = PreferenceManager.getDefaultSharedPreferences(WelcomeActivity.this);
-
-
 
       isRegistered= prefs.getBooleanPreferences("isRegistered ");
        if(isRegistered )

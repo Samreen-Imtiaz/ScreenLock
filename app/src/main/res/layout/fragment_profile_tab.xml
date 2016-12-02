@@ -14,24 +14,33 @@
         android:background="@color/colorPrimary">
 
 
-        <TextView
+      <!-- <TextView
             android:id="@+id/textView12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:textColor="@color/white"
-            android:layout_marginBottom="@dimen/margin_left_15"
-            android:text="Lock Security!" />
+           android:textSize="20dp"
+            android:layout_marginBottom="1dp"
+            android:text="Lock Security!" /> -->
 
         <cn.gavinliu.android.lib.shapedimageview.ShapedImageView
             android:id="@+id/imageView2"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
             app:shape_mode="circle"
             android:src="@drawable/ic_action_user"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true" />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/button"
+            android:background="@drawable/ic_image"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true" />
     </RelativeLayout>
 
     <ScrollView
