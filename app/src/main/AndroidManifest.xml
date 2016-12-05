@@ -28,6 +28,9 @@
             </intent-filter>
     </activity>
         <activity android:name=".User_slide"></activity>
+       <activity android:name=".Preferences"></activity>
+        <activity android:name=".Settings"></activity>
+        <activity android:name=".FAQ"></activity>
 
 
 

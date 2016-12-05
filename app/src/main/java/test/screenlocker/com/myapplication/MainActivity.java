@@ -105,20 +105,16 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
         String title = getString(R.string.app_name);
         switch (position) {
             case 0:
-                fragment = new Settings();
-                title = getString(R.string.settings);
+
                 break;
             case 1:
-                activity = new UserManual();
-                title = getString(R.string.slides);
+
                 break;
             case 2:
-                fragment = new Preferences();
-                title = getString(R.string.pref);
+
                 break;
             case 3:
-                fragment = new FAQ();
-                title = getString(R.string.faq);
+
                 break;
             default:
                 break;

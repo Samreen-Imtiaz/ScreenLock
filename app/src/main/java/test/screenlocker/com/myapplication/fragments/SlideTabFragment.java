@@ -28,6 +28,7 @@ import test.screenlocker.com.myapplication.Preferences;
 import test.screenlocker.com.myapplication.R;
 import test.screenlocker.com.myapplication.Settings;
 import test.screenlocker.com.myapplication.WelcomeActivity;
+import test.screenlocker.com.myapplication.utils.PreferencesConstants;
 import test.screenlocker.com.myapplication.utils.PreferencesHandler;
 
 import static android.app.Activity.RESULT_OK;
@@ -41,8 +42,6 @@ public class SlideTabFragment extends Fragment {
     Bitmap btmap;
     ImageView imageView;
     PreferencesHandler prefs;
-    View view;
-    float v;
 
     @Nullable
     @Override
@@ -54,10 +53,9 @@ public class SlideTabFragment extends Fragment {
         t4 = (TextView) rootView.findViewById(R.id.FAQ);
         imageView = (ImageView) rootView.findViewById(R.id.imageView2);
         btnImage = (Button) rootView.findViewById(R.id.button);
-        onPanelSlide(view, v);
-      //  String u=prefs.getStringPreferences("RESULT_LOAD_IMAGE");
-      //  btmap=decodeBase64(u);
-      //  imageView.setImageBitmap(btmap);
+        String u=prefs.getStringPreferences(PreferencesConstants.image);
+        btmap=decodeBase64(u);
+        imageView.setImageBitmap(btmap);
 
     btnImage.setOnClickListener(new View.OnClickListener() {
 
@@ -71,6 +69,33 @@ public class SlideTabFragment extends Fragment {
                 startActivityForResult(i, RESULT_LOAD_IMAGE);
             }
 
+        });
+        t1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), Settings.class);
+                startActivity(intent);
+            }
+        });
+
+        t2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), WelcomeActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        t3.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), Preferences.class);
+                startActivity(intent);
+            }
+        });
+
+        t4.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), FAQ.class);
+                startActivity(intent);
+            }
         });
         return rootView;
     }
@@ -100,7 +125,7 @@ public class SlideTabFragment extends Fragment {
                     e.printStackTrace();
                 }
                 imageView.setImageBitmap(bmp);
-          //      prefs.updatePreferences("RESULT_LOAD_IMAGE", encodeTobase64(btmap));
+              prefs.updatePreferences(PreferencesConstants.image, encodeTobase64(bmp));
 
             }
 
@@ -133,94 +158,6 @@ public class SlideTabFragment extends Fragment {
         Bitmap image = BitmapFactory.decodeFileDescriptor(fileDescriptor);
         parcelFileDescriptor.close();
         return image;
-    }
-
-
-
-
-    public void onPanelSlide(View view, float v) {
-        if (v == 0) {
-            t1.setOnClickListener(new View.OnClickListener() {
-                public void onClick(View v) {
-                    Intent intent = new Intent(getActivity(), Settings.class);
-                    startActivity(intent);
-                }
-            });
-
-            t2.setOnClickListener(new View.OnClickListener() {
-                public void onClick(View v) {
-                    Intent intent = new Intent(getActivity(), WelcomeActivity.class);
-                    startActivity(intent);
-                }
-            });
-
-            t3.setOnClickListener(new View.OnClickListener() {
-                public void onClick(View v) {
-                    Intent intent = new Intent(getActivity(), Preferences.class);
-                    startActivity(intent);
-                }
-            });
-
-            t4.setOnClickListener(new View.OnClickListener() {
-                public void onClick(View v) {
-                    Intent intent = new Intent(getActivity(), FAQ.class);
-                    startActivity(intent);
-                }
-            });
-
-
-        } else if (v == 1) {
-            t2.setOnClickListener(new View.OnClickListener() {
-                public void onClick(View v) {
-                    Intent intent = new Intent(getActivity(), WelcomeActivity.class);
-                    startActivity(intent);
-                }
-            });
-
-            t3.setOnClickListener(new View.OnClickListener() {
-                public void onClick(View v) {
-                    Intent intent = new Intent(getActivity(), Preferences.class);
-                    startActivity(intent);
-                }
-            });
-
-            t4.setOnClickListener(new View.OnClickListener() {
-                public void onClick(View v) {
-                    Intent intent = new Intent(getActivity(), FAQ.class);
-                    startActivity(intent);
-                }
-            });
-
-
-        } else if (v == 2) {
-            t3.setOnClickListener(new View.OnClickListener() {
-                public void onClick(View v) {
-                    Intent intent = new Intent(getActivity(), Preferences.class);
-                    startActivity(intent);
-                }
-            });
-
-            t4.setOnClickListener(new View.OnClickListener() {
-                public void onClick(View v) {
-                    Intent intent = new Intent(getActivity(), FAQ.class);
-                    startActivity(intent);
-                }
-            });
-
-
-        } else if (v == 3) {
-            t4.setOnClickListener(new View.OnClickListener() {
-                public void onClick(View v) {
-                    Intent intent = new Intent(getActivity(), FAQ.class);
-                    startActivity(intent);
-                }
-            });
-
-
-        } else {
-        }
-
-
     }
 
 }

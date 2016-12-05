@@ -119,13 +119,14 @@ arround you."
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="     About Smart AppLocker"
+        android:text="About Lock Security!"
+        android:textAlignment="center"
         android:id="@+id/textView3"
         android:textColor="@color/colorPrimary"
         android:textSize="25dp"
         android:textStyle="bold"
         android:layout_marginTop="35dp"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

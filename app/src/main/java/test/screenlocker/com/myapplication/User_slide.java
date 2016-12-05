@@ -3,13 +3,26 @@ package test.screenlocker.com.myapplication;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.database.Cursor;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.ParcelFileDescriptor;
+import android.provider.MediaStore;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Base64;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
+
+import java.io.ByteArrayOutputStream;
+import java.io.FileDescriptor;
+import java.io.IOException;
 
 import test.screenlocker.com.myapplication.utils.PreferencesConstants;
 import test.screenlocker.com.myapplication.utils.PreferencesHandler;
@@ -19,6 +32,10 @@ public class User_slide extends Activity {
     private EditText etEmailAddrss;
     private EditText etPhoneNumber;
     private Button btnSubmit, btnskip;
+    private static int RESULT_LOAD_IMAGE = 1;
+    Bitmap btmap;
+    ImageView imageView;
+    PreferencesHandler pref;
 
     PreferencesHandler prefs;
 
@@ -28,7 +45,7 @@ public class User_slide extends Activity {
         setContentView(R.layout.user_slide);
         prefs.updatePreferences("isRegistered ",true);
 
-
+        imageView = (ImageView) findViewById(R.id.imageView3);
         etEmailAddrss= (EditText) findViewById(R.id.editText7);
         etEmailAddrss.setText(PreferencesHandler.getStringPreferences(PreferencesConstants.email));
         etEmailAddrss.addTextChangedListener(new TextWatcher() {
@@ -75,7 +92,23 @@ public class User_slide extends Activity {
             }
         });
 
+        String u=prefs.getStringPreferences(PreferencesConstants.image);
+        btmap=decodeBase64(u);
+        imageView.setImageBitmap(btmap);
 
+        imageView.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+
+                Intent i = new Intent(
+                        Intent.ACTION_PICK,
+                        android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+
+                startActivityForResult(i, RESULT_LOAD_IMAGE);
+            }
+
+        });
     }
     private void submitForm() {
         PreferencesHandler.updatePreferences(PreferencesConstants.email, etEmailAddrss.getText().toString().trim());
@@ -92,4 +125,64 @@ public class User_slide extends Activity {
 
         return ret;
     }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data){
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == RESULT_LOAD_IMAGE && resultCode == RESULT_OK && null != data) {
+            Uri selectedImage = data.getData();
+            String[] filePathColumn = {MediaStore.Images.Media.DATA};
+
+            Cursor cursor = getContentResolver().query(selectedImage,
+                    filePathColumn, null, null, null);
+            cursor.moveToFirst();
+
+            int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
+            String picturePath = cursor.getString(columnIndex);
+            cursor.close();
+
+            Bitmap bmp = null;
+            try {
+                bmp = getBitmapFromUri(selectedImage);
+            } catch (IOException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+            imageView.setImageBitmap(bmp);
+            prefs.updatePreferences(PreferencesConstants.image, encodeTobase64(bmp));
+
+        }
+
+    }
+
+    public static String encodeTobase64(Bitmap image)
+    {
+        Bitmap immage = image;
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        immage.compress(Bitmap.CompressFormat.PNG, 100, baos);
+        byte[] b = baos.toByteArray();
+        String imageEncoded = Base64.encodeToString(b, Base64.DEFAULT);
+
+        Log.d("Image Log:", imageEncoded);
+        return imageEncoded;
+
+    }
+    public static Bitmap decodeBase64(String input)
+    {
+        byte[] decodedByte = Base64.decode(input, 0);
+        return BitmapFactory
+                .decodeByteArray(decodedByte, 0, decodedByte.length);
+    }
+
+
+    private Bitmap getBitmapFromUri(Uri uri) throws IOException {
+        ParcelFileDescriptor parcelFileDescriptor =
+               getContentResolver().openFileDescriptor(uri, "r");
+        FileDescriptor fileDescriptor = parcelFileDescriptor.getFileDescriptor();
+        Bitmap image = BitmapFactory.decodeFileDescriptor(fileDescriptor);
+        parcelFileDescriptor.close();
+        return image;
+    }
+
 }

@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:textSize="45dp"
-        android:text="HOME"
+        android:text="FAQ"
         android:textStyle="bold"/>
 
     <TextView

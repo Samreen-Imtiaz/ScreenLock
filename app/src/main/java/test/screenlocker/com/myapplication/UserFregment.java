@@ -44,7 +44,10 @@ public class UserFregment extends Fragment {
     SlidingPaneLayout mSlidingLayout;
     ImageButton slidingPaneButton;
     ImageView imageView;
+    PreferencesHandler prefs;
+    Bitmap btmap;
     private static int RESULT_LOAD_IMAGE = 1;
+    String u;
     public UserFregment() {
     }
 
@@ -63,6 +66,9 @@ public class UserFregment extends Fragment {
        }
         initView();
         setListeners();
+       // u=prefs.getStringPreferences(PreferencesConstants.image);
+       // btmap=decodeBase64(u);
+       // imageView.setImageBitmap(btmap);
 
         return view;
     }
@@ -75,16 +81,24 @@ public class UserFregment extends Fragment {
        imageView = (ImageView) view.findViewById(R.id.imageView2);
         btnImage = (Button) view.findViewById(R.id.image);
         heading = (TextView) view.findViewById(R.id.textview);
+        heading.setText("User Profile");
+
+       //  u=prefs.getStringPreferences(PreferencesConstants.image);
+       //  btmap=decodeBase64(u);
+        // imageView.setImageBitmap(btmap);
+
 
         etPhoneNumber.setText(PreferencesHandler.getStringPreferences(PreferencesConstants.phone));
         etEmailAddrss.setText(PreferencesHandler.getStringPreferences(PreferencesConstants.email));
 
-        heading.setText("User Profile");
+
         mSlidingLayout = (SlidingPaneLayout) getActivity().findViewById(R.id.sliding_pane_layout);
         mSlidingLayout.setPanelSlideListener(SliderListener.getInstance(getActivity()));
         slidingPaneButton = (ImageButton) view.findViewById(R.id.left_button_header);
         slidingPaneButton.setVisibility(View.VISIBLE);
         slidingPaneButton.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.top_left_menu_icon));
+
+
     }
 
     public void setListeners() {
@@ -115,7 +129,7 @@ public class UserFregment extends Fragment {
         btnclear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                etEmailAddrss.setText("");
+            etEmailAddrss.setText("");
                 etPhoneNumber.setText("");
             }
         });
@@ -139,7 +153,7 @@ public class UserFregment extends Fragment {
             }
         });
 
-      btnImage.setOnClickListener(new View.OnClickListener() {
+      /*  btnImage.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View arg0) {
@@ -152,6 +166,7 @@ public class UserFregment extends Fragment {
             }
 
         });
+*/
 
     }
 
@@ -196,7 +211,7 @@ public class UserFregment extends Fragment {
                 e.printStackTrace();
             }
             imageView.setImageBitmap(bmp);
-            //      prefs.updatePreferences("RESULT_LOAD_IMAGE", encodeTobase64(btmap));
+               //  prefs.updatePreferences(PreferencesConstants.image, encodeTobase64(bmp));
 
         }
 

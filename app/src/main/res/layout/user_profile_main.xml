@@ -9,10 +9,11 @@
 		android:id="@+id/set"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:textColor="@color/colorPrimary"
 		android:padding="@dimen/margin_left_10"
+		android:drawableLeft="@drawable/ic_setting"
+		android:onClick="onClick"
 		android:textSize="18sp"
-		android:text="Settings" />
+		android:text="    Settings" />
 	<View
 		android:background="@color/border_grey"
 		android:layout_width="fill_parent"
@@ -21,10 +22,11 @@
         android:id="@+id/man"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/colorPrimary"
+		android:drawableLeft="@drawable/ic_manual"
+		android:onClick="onClick"
         android:padding="@dimen/margin_left_10"
         android:textSize="18sp"
-        android:text="User Manual" />
+        android:text="    User Manual" />
 
     <View
         android:background="@color/border_grey"
@@ -35,10 +37,11 @@
 		android:id="@+id/pref"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:textColor="@color/colorPrimary"
+		android:drawableLeft="@drawable/ic_pref"
 		android:padding="@dimen/margin_left_10"
 		android:textSize="18sp"
-		android:text="Preferences" />
+		android:onClick="onClick"
+		android:text="    Preferences" />
 
 	<View
 		android:background="@color/border_grey"
@@ -48,9 +51,11 @@
 		android:id="@+id/FAQ"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:textColor="@color/colorPrimary"
+		android:onClick="onClick"
+		android:padding="@dimen/margin_left_10"
 		android:textSize="18sp"
-		android:text="FAQ" />
+		android:drawableLeft="@drawable/ic_faq"
+		android:text="    FAQ" />
 
 	<View
 		android:background="@color/border_grey"

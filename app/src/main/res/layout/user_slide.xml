@@ -4,70 +4,6 @@
     android:layout_height="match_parent"
     android:background="@color/border_grey">
 
-
-<!--
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:gravity="center_horizontal"
-        android:orientation="vertical">
-
-        <ImageView
-            android:layout_width="@dimen/img_width_height"
-            android:layout_height="@dimen/img_width_height"
-            android:src="@drawable/ic_food" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/slide_1_title"
-            android:textColor="@android:color/white"
-            android:textSize="@dimen/slide_title"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:paddingLeft="@dimen/desc_padding"
-            android:paddingRight="@dimen/desc_padding"
-            android:text="@string/slide_1_desc"
-            android:textAlignment="center"
-            android:textColor="@android:color/white"
-            android:textSize="@dimen/slide_desc" />
-
-    </LinearLayout> -->
-  <!--  <TextView
-            android:text="Number:"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textStyle="bold"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            android:textAlignment="viewStart"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="150dp"
-            android:id="@+id/textView5" />
--->
-
-    <!--<TextView
-    android:text="Email:"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:textAppearance="?android:attr/textAppearanceMedium"
-    android:textStyle="bold"
-    android:textSize="20sp"
-    android:textColor="@color/white"
-    android:layout_marginTop="30dp"
-    android:id="@+id/textView6"
-    android:layout_below="@+id/editText6"
-    android:layout_alignStart="@+id/textView5" />
--->
-
     <Button
         android:text="Save"
         android:layout_width="wrap_content"
@@ -87,22 +23,9 @@
         android:gravity="center_horizontal"
         android:text="User Profile!"
         android:textColor="@color/white"
-        android:layout_marginBottom="49dp"
+        android:layout_marginBottom="35dp"
         android:layout_alignBottom="@+id/editText6"
         android:layout_alignParentStart="true" />
-
-    <EditText
-        android:text="Number"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="phone"
-        android:ems="10"
-        android:textColor="@color/white"
-        android:background="@drawable/bg_edittext"
-        android:layout_marginTop="150dp"
-        android:id="@+id/editText6"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
 
     <Button
         android:text="Skip"
@@ -128,5 +51,29 @@
         android:layout_marginBottom="41dp"
         android:layout_above="@+id/button5"
         android:layout_alignStart="@+id/editText6" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/imageView3"
+        android:src="@drawable/ic_action_user"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="42dp" />
+
+    <EditText
+        android:text="Number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:ems="10"
+        android:textColor="@color/white"
+        android:background="@drawable/bg_edittext"
+        android:layout_marginTop="43dp"
+        android:id="@+id/editText6"
+        android:layout_below="@+id/imageView3"
+        android:layout_centerHorizontal="true" />
+
+
 
 </RelativeLayout>
