@@ -1,5 +1,6 @@
 package test.screenlocker.com.myapplication.fragments;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
@@ -39,6 +40,8 @@ public class SlideTabFragment extends Fragment {
     TextView t1, t2, t3, t4;
     Button btnImage;
     private static int RESULT_LOAD_IMAGE = 1;
+    private static final int REQUEST_CAMERA = 1;
+    private static final int SELECT_FILE = 2;
     Bitmap btmap;
     ImageView imageView;
     PreferencesHandler prefs;
@@ -62,11 +65,38 @@ public class SlideTabFragment extends Fragment {
             @Override
             public void onClick(View arg0) {
 
-                Intent i = new Intent(
-                        Intent.ACTION_PICK,
-                        android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+              //  Intent i = new Intent(
+               //         Intent.ACTION_PICK,
+               //         android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
 
-                startActivityForResult(i, RESULT_LOAD_IMAGE);
+               // startActivityForResult(i, RESULT_LOAD_IMAGE);
+
+                final CharSequence[] items = {"Take Photo", "Choose from Gallery", "Cancel"};
+                android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(getActivity());
+                builder.setTitle("Add Photo!");
+                builder.setItems(items, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int item) {
+
+                        if (items[item].equals("Take Photo")) {
+                            RESULT_LOAD_IMAGE = 1;
+                            Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                            startActivityForResult(intent, REQUEST_CAMERA);
+
+                        } else if (items[item].equals("Choose from Gallery")) {
+                            RESULT_LOAD_IMAGE = 1;
+                            Intent intent = new Intent(
+                                    Intent.ACTION_PICK,
+                                    MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                            startActivityForResult(intent,SELECT_FILE);
+
+                        } else if (items[item].equals("Cancel")) {
+                            RESULT_LOAD_IMAGE = 0;
+                            dialog.dismiss();
+                        }
+                    }
+                });
+                builder.show();
             }
 
         });
