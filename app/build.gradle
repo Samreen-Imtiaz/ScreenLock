@@ -30,7 +30,5 @@ dependencies {
     compile 'me.zhanghai.android.patternlock:library:2.0.4'
     compile 'com.android.support:preference-v7:24.0.0'
     compile 'com.jakewharton:butterknife:8.2.1'
-
-
-
+    compile files('libs/volley.jar')
 }

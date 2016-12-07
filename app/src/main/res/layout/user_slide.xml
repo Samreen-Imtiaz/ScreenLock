@@ -4,76 +4,90 @@
     android:layout_height="match_parent"
     android:background="@color/border_grey">
 
-    <Button
-        android:text="Save"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button4"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        android:layout_marginTop="108dp"
-        android:layout_marginLeft="70dp"
-        android:layout_below="@+id/editText6"
-        />
-
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textSize="30dp"
-        android:gravity="center_horizontal"
-        android:text="User Profile!"
-        android:textColor="@color/white"
-        android:layout_marginBottom="35dp"
-        android:layout_alignBottom="@+id/editText6"
-        android:layout_alignParentStart="true" />
-
-    <Button
-        android:text="Skip"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button5"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        android:layout_marginStart="36dp"
-        android:layout_alignBaseline="@+id/button4"
-        android:layout_alignBottom="@+id/button4"
-        android:layout_toEndOf="@+id/button4" />
-
-    <EditText
-        android:text="Email"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="textEmailAddress"
-            android:ems="10"
-        android:textColor="@color/white"
-        android:background="@drawable/bg_edittext"
-            android:id="@+id/editText7"
-        android:layout_marginBottom="41dp"
-        android:layout_above="@+id/button5"
-        android:layout_alignStart="@+id/editText6" />
 
     <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:id="@+id/imageView3"
         android:src="@drawable/ic_action_user"
-        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="42dp" />
-
-    <EditText
-        android:text="Number"
+        android:layout_marginTop="50dp"
+        android:id="@+id/imageView3"/>
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="phone"
-        android:ems="10"
-        android:textColor="@color/white"
-        android:background="@drawable/bg_edittext"
-        android:layout_marginTop="43dp"
-        android:id="@+id/editText6"
+        android:textSize="30dp"
+        android:text="User Profile"
         android:layout_below="@+id/imageView3"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:id="@+id/txt"/>
 
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="38dp"
+        android:id="@+id/editText6"
+        android:background="@android:color/white"
+        android:hint="@string/lbl_num"
+        android:layout_below="@+id/txt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="21dp"
+        android:inputType="number"/>
 
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="38dp"
+        android:id="@+id/editText7"
+        android:background="@android:color/white"
+        android:hint="@string/lbl_email"
+        android:layout_below="@+id/editText6"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="21dp"
+        android:inputType="textEmailAddress"/>
 
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:id="@id/button4"
+        android:textColor="@android:color/white"
+        android:background="@color/bb_inActiveBottomBarItemColor"
+        android:layout_marginTop="35dp"
+        android:text="Save"
+        android:layout_below="@+id/editText7"
+        android:layout_alignStart="@+id/editText7" />
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:id="@id/button5"
+        android:textColor="@android:color/white"
+        android:text="Skip"
+        android:background="@color/bb_inActiveBottomBarItemColor"
+        android:layout_alignBaseline="@+id/button4"
+        android:layout_alignBottom="@+id/button4"
+        android:layout_alignEnd="@+id/editText7" />
+
+    <!--
+
+      <Button
+          android:id="@+id/button4"
+          android:layout_width="100dp"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center_horizontal"
+          android:layout_marginTop="25dp"
+          android:background="@color/colorPrimaryDark"
+          android:text="@string/lbl_save"
+          android:textColor="@android:color/white"
+          android:textSize="14dp" />
+
+      <Button
+          android:id="@+id/button5"
+      android:layout_width="100dp"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center_horizontal"
+      android:layout_marginTop="25dp"
+      android:background="@color/colorPrimaryDark"
+      android:text="@string/lbl_clr"
+      android:textColor="@android:color/white"
+      android:textSize="14dp" />
+      </LinearLayout>
+  -->
 </RelativeLayout>
