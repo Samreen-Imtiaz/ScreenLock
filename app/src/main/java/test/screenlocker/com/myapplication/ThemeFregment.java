@@ -1,4 +1,5 @@
 package test.screenlocker.com.myapplication;
+
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -19,8 +20,7 @@ import java.util.ArrayList;
 
 import test.screenlocker.com.myapplication.listener.SliderListener;
 
-public class ThemeFregment extends Fragment
-{
+public class ThemeFregment extends Fragment {
 
     private TabHost mTabHost;
     private ViewPager mViewPager;
@@ -40,8 +40,7 @@ public class ThemeFregment extends Fragment
     }
 
     @Override
-    public void onCreate(Bundle instance)
-    {
+    public void onCreate(Bundle instance) {
         super.onCreate(instance);
 
     }
@@ -78,38 +77,32 @@ public class ThemeFregment extends Fragment
         return v;
     }
 
-    public static class TabsAdapter extends FragmentPagerAdapter implements TabHost.OnTabChangeListener, ViewPager.OnPageChangeListener
-    {
+    public static class TabsAdapter extends FragmentPagerAdapter implements TabHost.OnTabChangeListener, ViewPager.OnPageChangeListener {
         private final Context mContext;
         private final TabHost mTabHost;
         private final ViewPager mViewPager;
         private final ArrayList<TabInfo> mTabs = new ArrayList<TabInfo>();
 
-        static final class TabInfo
-        {
+        static final class TabInfo {
             private final String tag;
             private final Class<?> clss;
             private final Bundle args;
 
-            TabInfo(String _tag, Class<?> _class, Bundle _args)
-            {
+            TabInfo(String _tag, Class<?> _class, Bundle _args) {
                 tag = _tag;
                 clss = _class;
                 args = _args;
             }
         }
 
-        static class DummyTabFactory implements TabHost.TabContentFactory
-        {
+        static class DummyTabFactory implements TabHost.TabContentFactory {
             private final Context mContext;
 
-            public DummyTabFactory(Context context)
-            {
+            public DummyTabFactory(Context context) {
                 mContext = context;
             }
 
-            public View createTabContent(String tag)
-            {
+            public View createTabContent(String tag) {
                 View v = new View(mContext);
                 v.setMinimumWidth(0);
                 v.setMinimumHeight(0);
@@ -117,8 +110,7 @@ public class ThemeFregment extends Fragment
             }
         }
 
-        public TabsAdapter(FragmentActivity activity, TabHost tabHost, ViewPager pager)
-        {
+        public TabsAdapter(FragmentActivity activity, TabHost tabHost, ViewPager pager) {
             super(activity.getSupportFragmentManager());
             mContext = activity;
             mTabHost = tabHost;
@@ -128,8 +120,7 @@ public class ThemeFregment extends Fragment
             mViewPager.setOnPageChangeListener(this);
         }
 
-        public void addTab(TabHost.TabSpec tabSpec, Class<?> clss, Bundle args)
-        {
+        public void addTab(TabHost.TabSpec tabSpec, Class<?> clss, Bundle args) {
             tabSpec.setContent(new DummyTabFactory(mContext));
             String tag = tabSpec.getTag();
 
@@ -140,32 +131,27 @@ public class ThemeFregment extends Fragment
         }
 
         @Override
-        public int getCount()
-        {
+        public int getCount() {
             return mTabs.size();
         }
 
         @Override
-        public Fragment getItem(int position)
-        {
+        public Fragment getItem(int position) {
             TabInfo info = mTabs.get(position);
 
             return Fragment.instantiate(mContext, info.clss.getName(), info.args);
 
         }
 
-        public void onTabChanged(String tabId)
-        {
+        public void onTabChanged(String tabId) {
             int position = mTabHost.getCurrentTab();
             mViewPager.setCurrentItem(position);
         }
 
-        public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels)
-        {
+        public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
         }
 
-        public void onPageSelected(int position)
-        {
+        public void onPageSelected(int position) {
             // Unfortunately when TabHost changes the current tab, it kindly
             // also takes care of putting focus on it when not in touch mode.
             // The jerk.
@@ -178,8 +164,7 @@ public class ThemeFregment extends Fragment
             widget.setDescendantFocusability(oldFocusability);
         }
 
-        public void onPageScrollStateChanged(int state)
-        {
+        public void onPageScrollStateChanged(int state) {
         }
     }
 }

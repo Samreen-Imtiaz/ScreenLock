@@ -2,58 +2,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="test.screenlocker.com.myapplication.HomeFragment" >
+    tools:context="test.screenlocker.com.myapplication.HomeFragment">
 
-  <!--  <LinearLayout
+    <include
+        android:id="@+id/top"
+        layout="@layout/main_header" />
+
+    <LinearLayout
+        android:id="@+id/top1"
         android:layout_width="fill_parent"
-        android:layout_height="50dp"
-        android:background="@color/colorPrimary">
-        <ImageView
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:background="@drawable/ic_action_name"
-            android:layout_marginTop="7dp"
-            android:layout_marginStart="5dp"/>
+        android:layout_height="110dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/top"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="  Home"
-            android:textSize="18dp"
+            android:layout_marginBottom="30dp"
+            android:gravity="center_horizontal"
+            android:text="Lock Security"
             android:textColor="@color/textColorPrimary"
-            android:layout_marginTop="12dp"/>
+            android:textSize="30dp" />
+
+        <Switch
+            android:id="@+id/switch5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal" />
     </LinearLayout>
--->
 
-  <include
-      android:id="@+id/top"
-      layout="@layout/main_header" />
-
-  <LinearLayout
-       android:layout_width="fill_parent"
-       android:layout_height="110dp"
-       android:background="@color/colorPrimary"
-      android:layout_below="@+id/top"
-      android:layout_alignParentStart="true">
-
-       <TextView
-           android:layout_width="fill_parent"
-           android:layout_height="wrap_content"
-           android:text="LOCK Security"
-           android:textSize="30dp"
-           android:textColor="@color/textColorPrimary"
-           android:layout_marginBottom="30dp"
-           android:gravity="center_horizontal"/>
-   </LinearLayout>
-
-  <Switch
-      android:layout_width="250dp"
-      android:layout_height="250dp"
-      android:layout_marginTop="59dp"
-      android:id="@+id/switch5"
-      android:gravity="center_horizontal"
-      android:layout_marginEnd="173dp"
-      android:layout_below="@+id/top"
-      android:layout_alignParentEnd="true" />
 
 
 </RelativeLayout>
