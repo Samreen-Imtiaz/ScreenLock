@@ -12,7 +12,7 @@ import com.roughike.bottombar.BottomBarFragment;
 import com.roughike.bottombar.OnTabSelectedListener;
 
 
-public class MainActivity extends AppCompatActivity implements FragmentDrawer.FragmentDrawerListener {
+public class MainActivity extends AppCompatActivity {
     private CoordinatorLayout coordinatorLayout;
     private static String TAG = MainActivity.class.getSimpleName();
 
@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
 
 
         // display the first navigation drawer view on app launch
-        displayView(0);
+
 
 
         ////////////////////////////////////////////////////////////////////////////////////////
@@ -55,71 +55,6 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
                 }
             }
         });
-
-        // Make a Badge for the first tab, with red background color and a value of "4".
-       // BottomBarBadge unreadMessages = bottomBar.makeBadgeForTabAt(1, "#E91E63", 4);
-      //  unreadMessages.show();
-      //  unreadMessages.setAnimationDuration(200);
-
-
-        ////////////////////////////////////////////////////////////////////////////////////////
-
-    }
-
-    ///////////////////////////////////////////////////////////////////////////////////////////
-  /*  @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main_menu, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        if (id == R.id.action_help) {
-            Toast.makeText(getApplicationContext(), "Search action is selected!", Toast.LENGTH_SHORT).show();
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }*/
-/////////////////////////////////////////////////////////////////////////////////////
-    @Override
-    public void onDrawerItemSelected(View view, int position) {
-        displayView(position);
-    }
-
-    private void displayView(int position) {
-        Fragment fragment = null;
-        UserManual activity= null;
-        String title = getString(R.string.app_name);
-        switch (position) {
-            case 0:
-
-                break;
-            case 1:
-
-                break;
-            case 2:
-
-                break;
-            case 3:
-
-                break;
-            default:
-                break;
-        }
-
 
     }
 

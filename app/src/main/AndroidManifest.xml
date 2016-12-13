@@ -5,6 +5,11 @@
 
     <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+
     <application
         android:name=".LocKAppApplicaton"
         android:allowBackup="true"
@@ -54,8 +59,15 @@
 
 
 
+        <activity
+            android:name=".WallpaperMain"
+            android:screenOrientation="portrait" >
+        </activity>
 
-
+        <activity
+            android:name=".FullScreenViewActivity"
+            android:screenOrientation="portrait" >
+        </activity>
         <activity
             android:name=".UnlockPattern"
             android:theme="@style/AppTheme" >

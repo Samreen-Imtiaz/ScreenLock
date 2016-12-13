@@ -44,10 +44,32 @@
         android:inputType="textEmailAddress"/>
 
     <Button
+        android:id="@+id/button4"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="Save"
+        android:background="@color/bb_inActiveBottomBarItemColor"
+        android:layout_below="@+id/editText7"
+        android:layout_alignStart="@+id/editText7"
+        android:layout_marginTop="24dp" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Skip"
+        android:textColor="@color/white"
+        android:background="@color/bb_inActiveBottomBarItemColor"
+        android:layout_alignBaseline="@+id/button4"
+        android:layout_alignBottom="@+id/button4"
+        android:layout_alignEnd="@+id/editText7" />
+
+    <!--<Button
         android:id="@id/button4"
-        android:textColor="@android:color/white"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/action_bar_title"
         android:background="@color/bb_inActiveBottomBarItemColor"
         android:layout_marginTop="35dp"
         android:text="Save"
@@ -58,36 +80,11 @@
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:id="@id/button5"
-        android:textColor="@android:color/white"
+        android:textColor="@color/action_bar_title"
         android:text="Skip"
         android:background="@color/bb_inActiveBottomBarItemColor"
         android:layout_alignBaseline="@+id/button4"
         android:layout_alignBottom="@+id/button4"
         android:layout_alignEnd="@+id/editText7" />
-
-    <!--
-
-      <Button
-          android:id="@+id/button4"
-          android:layout_width="100dp"
-          android:layout_height="wrap_content"
-          android:layout_gravity="center_horizontal"
-          android:layout_marginTop="25dp"
-          android:background="@color/colorPrimaryDark"
-          android:text="@string/lbl_save"
-          android:textColor="@android:color/white"
-          android:textSize="14dp" />
-
-      <Button
-          android:id="@+id/button5"
-      android:layout_width="100dp"
-      android:layout_height="wrap_content"
-      android:layout_gravity="center_horizontal"
-      android:layout_marginTop="25dp"
-      android:background="@color/colorPrimaryDark"
-      android:text="@string/lbl_clr"
-      android:textColor="@android:color/white"
-      android:textSize="14dp" />
-      </LinearLayout>
-  -->
+-->
 </RelativeLayout>
