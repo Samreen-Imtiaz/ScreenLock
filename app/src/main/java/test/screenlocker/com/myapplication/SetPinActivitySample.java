@@ -1,11 +1,17 @@
 package test.screenlocker.com.myapplication;
 
-/**
- * Created by samreen on 11/16/2016.
- */
+import android.content.SharedPreferences;
 
-public class SetPinActivitySample  {
-    public void onPinSet(String pin){
-        //Save 'pin' as SharedPreference
+import com.manusunny.pinlock.SetPinActivity;
+
+public class SetPinActivitySample extends SetPinActivity {
+
+    @Override
+    public void onPinSet(String pin) {
+        SharedPreferences.Editor edit = PinActivity.pinLockPrefs.edit();
+        edit.putString("pin", pin);
+        edit.commit();
+        setResult(SUCCESS);
+        finish();
     }
 }

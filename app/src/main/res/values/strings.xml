@@ -112,4 +112,17 @@
     <string name="title_activity_home">Fingerprint</string>
     <string name="activity_home_desc">You have successfully logged in with fingerprint authentication</string>
     <string name="activity_home_note">Close and re-open the app to see the fingerprint auth screen again</string>
+
+
+
+
+    <string name="message_enter_pin">Enter PIN</string>
+    <string name="message_enter_new_pin">Enter new PIN</string>
+    <string name="message_confirm_pin">Re enter PIN</string>
+    <string name="message_invalid_pin">Invalid PIN. Try again</string>
+    <string name="message_pin_mismatch">PIN mismatch. Try again</string>
+
+    <string name="button_cancel">Cancel</string>
+    <string name="button_forgot_pin">Forgot PIN</string>
+
 </resources>

@@ -60,7 +60,7 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
-    <ListView
+   <!-- <ListView
         android:id="@+id/listview"
         android:layout_marginTop="180dp"
         android:layout_alignTop="@+id/textView2"
@@ -69,6 +69,32 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true" >
     </ListView>
-
+-->
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_weight="0.2"
+        android:id="@+id/confirm_pin"
+        android:text="Create PIN"
+        android:textColor="@color/action_bar"
+        android:textSize="20sp"
+        android:gravity="left"
+        android:textStyle="bold"
+        android:layout_marginTop="13dp"
+        android:layout_below="@+id/switch3"
+        android:layout_alignStart="@+id/textView3" />
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_weight="0.2"
+        android:id="@+id/set_pin"
+        android:text="Change PIN"
+        android:textColor="@color/action_bar"
+        android:textSize="20sp"
+        android:gravity="left"
+        android:textStyle="bold"
+        android:layout_marginTop="13dp"
+        android:layout_below="@+id/confirm_pin"
+        android:layout_alignStart="@+id/textView3" />
 
 </RelativeLayout>
