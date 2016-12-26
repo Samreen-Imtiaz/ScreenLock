@@ -38,7 +38,13 @@ public class HeavyLifter {
             }
         }.start();
     }
- 
+ //WallpaperManager.getInstance(this).setStream(inputStream, null, true, WallpaperManager.FLAG_LOCK);
+/*
+* int setStream (InputStream bitmapData,  Rect visibleCropHint,  boolean allowBackup, int which)
+
+int setResource (int resid, int which)
+
+int setBitmap (Bitmap fullImage, Rect visibleCropHint,  boolean allowBackup,  int which)*/
 
     private Bitmap getImage(int resourceId) {
         Bitmap bitmap = BitmapFactory.decodeResource(context.getResources(), resourceId, null);
