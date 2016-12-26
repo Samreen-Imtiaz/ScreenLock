@@ -8,7 +8,9 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.SET_WALLPAPER" />
-    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.BIND_WALLPAPER"/>
 
     <application
         android:name=".LocKAppApplicaton"
@@ -23,7 +25,8 @@
         <activity android:name=".Splash"
             android:screenOrientation="portrait"
             >
-
+            <activity android:name="com.google.ads.AdActivity"
+                android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
         </activity>
         <activity android:name=".WelcomeActivity">
             <intent-filter>
@@ -40,7 +43,10 @@
         <activity android:name=".PinActivity"></activity>
         <activity android:name=".SetPinActivitySample" ></activity>
 
-
+        <uses-feature
+            android:name="android.software.live_wallpaper"
+            android:required="true" >
+        </uses-feature>
 
         <service android:name=".PinLockService" />
 
@@ -60,16 +66,6 @@
         </activity>
 
 
-
-        <activity
-            android:name=".WallpaperMain"
-            android:screenOrientation="portrait" >
-        </activity>
-
-        <activity
-            android:name=".FullScreenViewActivity"
-            android:screenOrientation="portrait" >
-        </activity>
         <activity
             android:name=".UnlockPattern"
             android:theme="@style/AppTheme" >

@@ -24,25 +24,12 @@ import android.widget.LinearLayout;
 
 import com.manusunny.pinlock.R;
 
-
-/**
- * Component that constitutes a single dot on StatusDots
- * @since 1.0.0
- */
 public class Dot extends View {
 
 
-    /**
-     * TypedArray of styled attributes passed to the element
-     */
+
     private TypedArray styledAttributes;
 
-
-    /**
-     * @param context Calling activity as context
-     * @param styledAttributes TypedArray of styled attributes passed to the element
-     * @param filled Indicates whether to fill the dot or not
-     */
     public Dot(Context context, TypedArray styledAttributes, boolean filled) {
         super(context);
         this.styledAttributes = styledAttributes;
@@ -51,9 +38,6 @@ public class Dot extends View {
     }
 
 
-    /**
-     * Setting up layout dimensional parameters for the view
-     */
     private void setLayoutParameters() {
         final int dotDiameter = styledAttributes.getDimensionPixelOffset(R.styleable.PinLock_statusDotDiameter, 50);
         final int margin = styledAttributes.getDimensionPixelOffset(R.styleable.PinLock_statusDotSpacing, 30);
@@ -62,11 +46,6 @@ public class Dot extends View {
         setLayoutParams(params);
     }
 
-
-    /**
-     * Setting up background for the view. Should pass shapes for both filled and empty dots.
-     * Otherwise will use the default backgrounds
-     */
     private void setBackground(boolean filled) {
         if (filled) {
             final int background = styledAttributes

@@ -85,10 +85,10 @@ public class KeypadAdapter extends BaseAdapter {
 
 
     private void vibrateIfEnabled() {
-        final boolean enabled = styledAttributes.getBoolean(R.styleable.PinLock_vibrateOnClick, false);
+        final boolean enabled = styledAttributes.getBoolean(R.styleable.PinLock_vibrateOnClick, true);
         if(enabled){
             Vibrator v = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
-            final int duration = styledAttributes.getInt(R.styleable.PinLock_vibrateDuration, 20);
+            final long duration = styledAttributes.getInt(R.styleable.PinLock_vibrateDuration, 20);
             v.vibrate(duration);
         }
     }

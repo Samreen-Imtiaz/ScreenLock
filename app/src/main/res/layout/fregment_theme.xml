@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     tools:context="test.screenlocker.com.myapplication.SecurityFragment">
 
-    <!-- <include
+    <include
          android:id="@+id/top"
          layout="@layout/main_header" />
         <LinearLayout
@@ -43,5 +43,5 @@
 
           </LinearLayout>
       </TabHost>
-      </LinearLayout>-->
+      </LinearLayout>
 </RelativeLayout>
