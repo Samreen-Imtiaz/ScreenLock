@@ -76,7 +76,7 @@ public class CustomPinActivity extends AppLockActivity {
         sharedPreferences =getSharedPreferences("SmartPinLock", Context.MODE_PRIVATE);;
 
         SurfaceView sv = new SurfaceView(this);
-
+//////
 
         try {
             mCamera.setPreviewDisplay(sv.getHolder());
