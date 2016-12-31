@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr format="reference" name="alp_button_bar_button_style"/>
+    <attr format="reference" name="alp_button_bar_style"/>
+    <attr format="reference" name="alp_color_pattern_path"/>
+    <attr format="reference" name="alp_drawable_btn_code_lock_default_holo"/>
+    <attr format="reference" name="alp_drawable_btn_code_lock_touched_holo"/>
+    <attr format="reference" name="alp_drawable_indicator_code_lock_point_area_default_holo"/>
+    <attr format="reference" name="aosp_drawable_indicator_code_lock_point_area_normal"/>
+    <bool name="alp_is_large_screen">false</bool>
+    <color name="alp_pattern_path_dark">#999999</color>
+    <color name="alp_pattern_path_light">@android:color/white</color>
+    <dimen name="alp_dialog_height_large_base">650dp</dimen>
+    <dimen name="alp_dialog_height_large_land_base">450dp</dimen>
+    <dimen name="alp_dialog_height_xlarge_land_base">650dp</dimen>
+    <dimen name="alp_dialog_width_large_base">550dp</dimen>
+    <dimen name="alp_dialog_width_large_land_base">550dp</dimen>
+    <dimen name="alp_dialog_width_xlarge_land_base">550dp</dimen>
+    <dimen name="alp_lockpatternview_size">400dp</dimen>
+    <dimen name="alp_separator_size">1dp</dimen>
+    <string name="alp_app_name">android-lockpattern</string>
+    <string name="alp_cmd_confirm">Confirm</string>
+    <string name="alp_cmd_continue">Continue</string>
+    <string name="alp_cmd_retry">Retry</string>
+    <string name="alp_lockscreen_access_pattern_cell_added">Cell added</string>
+    <string name="alp_lockscreen_access_pattern_cleared">Pattern cleared</string>
+    <string name="alp_lockscreen_access_pattern_detected">Pattern completed</string>
+    <string name="alp_lockscreen_access_pattern_start">Pattern started</string>
+    <string name="alp_msg_connect_4dots">Connect at least 4 dots.\nTry again…</string>
+    <string name="alp_msg_draw_an_unlock_pattern">Draw an unlock pattern:</string>
+    <string name="alp_msg_draw_pattern_to_unlock">Draw pattern to unlock:</string>
+    <string name="alp_msg_pattern_recorded">Pattern recorded!</string>
+    <string name="alp_msg_redraw_pattern_to_confirm">Redraw pattern to confirm:</string>
+    <string name="alp_msg_release_finger_when_done">Release finger when done</string>
+    <string name="alp_msg_try_again">Sorry, try again</string>
+    <string name="alp_msg_your_new_unlock_pattern">Your new unlock pattern:</string>
+    <string name="alp_pmsg_connect_x_dots">Connect at least %1$d dots.\nTry again…</string>
+    <style name="AOSP_DialogWindowTitle">
+        <item name="android:maxLines">1</item>
+        <item name="android:scrollHorizontally">true</item>
+        <item name="android:textAppearance">@android:style/TextAppearance.DialogWindowTitle</item>
+    </style>
+    <style name="Alp.BaseTheme.Dark" parent="@android:style/Theme"/>
+    <style name="Alp.BaseTheme.Dialog.Dark" parent="@android:style/Theme.Dialog">
+
+        <!-- AOSP -->
+
+        <item name="android:windowBackground">@drawable/aosp_dialog_full_holo_dark</item>
+    </style>
+    <style name="Alp.BaseTheme.Dialog.Light" parent="@android:style/Theme.Light">
+
+        <!-- AOSP -->
+
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowTitleStyle">@style/AOSP_DialogWindowTitle</item>
+        <item name="android:windowBackground">@drawable/aosp_dialog_full_holo_light</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+    </style>
+    <style name="Alp.BaseTheme.Light" parent="@android:style/Theme.Light"/>
+    <style name="Alp.BaseThemeHelper.Dark" parent="@style/Alp.BaseTheme.Dark"/>
+    <style name="Alp.BaseThemeHelper.Dialog.Dark" parent="@style/Alp.BaseTheme.Dialog.Dark"/>
+    <style name="Alp.BaseThemeHelper.Dialog.Light" parent="@style/Alp.BaseTheme.Dialog.Light"/>
+    <style name="Alp.BaseThemeHelper.Light" parent="@style/Alp.BaseTheme.Light"/>
+    <style name="Alp.Theme.Dark" parent="@style/Alp.BaseThemeHelper.Dark">
+
+        <!-- AOSP -->
+
+        <item name="android:windowBackground">@drawable/aosp_background_holo_dark</item>
+
+        <!-- android-lockpattern -->
+
+        <item name="alp_drawable_btn_code_lock_default_holo">@drawable/alp_btn_code_lock_default_holo_light</item>
+        <item name="alp_drawable_btn_code_lock_touched_holo">@drawable/alp_btn_code_lock_touched_holo_light</item>
+        <item name="alp_drawable_indicator_code_lock_point_area_default_holo">@drawable/alp_indicator_code_lock_point_area_default_holo_light</item>
+        <item name="alp_color_pattern_path">@color/alp_pattern_path_light</item>
+        <item name="aosp_drawable_indicator_code_lock_point_area_normal">@drawable/aosp_indicator_code_lock_point_area_green_holo</item>
+    </style>
+    <style name="Alp.Theme.Dialog.Dark" parent="@style/Alp.BaseThemeHelper.Dialog.Dark">
+
+        <!-- android-lockpattern -->
+
+        <item name="alp_drawable_btn_code_lock_default_holo">@drawable/alp_btn_code_lock_default_holo_light</item>
+        <item name="alp_drawable_btn_code_lock_touched_holo">@drawable/alp_btn_code_lock_touched_holo_light</item>
+        <item name="alp_drawable_indicator_code_lock_point_area_default_holo">@drawable/alp_indicator_code_lock_point_area_default_holo_light</item>
+        <item name="alp_color_pattern_path">@color/alp_pattern_path_light</item>
+        <item name="aosp_drawable_indicator_code_lock_point_area_normal">@drawable/aosp_indicator_code_lock_point_area_green_holo</item>
+    </style>
+    <style name="Alp.Theme.Dialog.Light" parent="@style/Alp.BaseThemeHelper.Dialog.Light">
+
+        <!-- android-lockpattern -->
+
+        <item name="alp_drawable_btn_code_lock_default_holo">@drawable/alp_btn_code_lock_default_holo_dark</item>
+        <item name="alp_drawable_btn_code_lock_touched_holo">@drawable/alp_btn_code_lock_touched_holo_dark</item>
+        <item name="alp_drawable_indicator_code_lock_point_area_default_holo">@drawable/alp_indicator_code_lock_point_area_default_holo_dark</item>
+        <item name="alp_color_pattern_path">@color/alp_pattern_path_dark</item>
+        <item name="aosp_drawable_indicator_code_lock_point_area_normal">@drawable/aosp_indicator_code_lock_point_area_blue_holo</item>
+    </style>
+    <style name="Alp.Theme.Light" parent="@style/Alp.BaseThemeHelper.Light">
+
+        <!-- AOSP -->
+
+        <item name="android:windowBackground">@drawable/aosp_background_holo_light</item>
+
+        <!-- android-lockpattern -->
+
+        <item name="alp_drawable_btn_code_lock_default_holo">@drawable/alp_btn_code_lock_default_holo_dark</item>
+        <item name="alp_drawable_btn_code_lock_touched_holo">@drawable/alp_btn_code_lock_touched_holo_dark</item>
+        <item name="alp_drawable_indicator_code_lock_point_area_default_holo">@drawable/alp_indicator_code_lock_point_area_default_holo_dark</item>
+        <item name="alp_color_pattern_path">@color/alp_pattern_path_dark</item>
+        <item name="aosp_drawable_indicator_code_lock_point_area_normal">@drawable/aosp_indicator_code_lock_point_area_blue_holo</item>
+    </style>
+    <item name="alp_button_bar_button_style" type="style">@null</item>
+    <item name="alp_button_bar_style" type="style">@null</item>
+</resources>

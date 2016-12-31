@@ -1,1 +1,2 @@
-include ':app', ':pinlock'
+include ':app', ':Pin'
+include ':Pattern'

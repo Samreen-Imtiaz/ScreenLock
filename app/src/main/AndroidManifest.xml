@@ -39,9 +39,6 @@
         <activity android:name=".Preferences"></activity>
         <activity android:name=".Settings"></activity>
         <activity android:name=".FAQ"></activity>
-        <activity android:name=".ConfirmPinActivitySample"></activity>
-        <activity android:name=".PinActivity"></activity>
-        <activity android:name=".SetPinActivitySample" ></activity>
 
         <uses-feature
             android:name="android.software.live_wallpaper"
@@ -91,44 +88,39 @@
             android:enabled="true" >
         </receiver>
 
+        <activity
+            android:name="test.screenlocker.com.myapplication.PinLock.MainActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="test.screenlocker.com.myapplication.PinLock.NotLockedActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="test.screenlocker.com.myapplication.PinLock.CustomPinActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity android:name="test.screenlocker.com.myapplication.PinLock.LockedCompatActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeNoActionbar">
+        </activity>
 
         <activity
-        android:name=".PatternLock.MainActivity"
-        android:label="@string/main_title"
-        >
-    </activity>
+            android:name="test.screenlocker.com.myapplication.PatternLock.MainActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="test.screenlocker.com.myapplication.PatternLock.LockPattern"
+            android:label="@string/app_name" >
+        </activity>
 
-    <activity
-        android:name=".PatternLock.PatternLockActivity"
-        android:label="@string/pattern_lock_title"
-        >
-        <meta-data
-            android:name="android.support.PARENT_ACTIVITY"
-            android:value=".PatternLock.MainActivity" />
-    </activity>
+        <activity
+            android:name="group.pals.android.lib.ui.pattern.LockPatternActivity"
+            android:configChanges="orientation|screenSize|keyboard|keyboardHidden"
+            android:screenOrientation="user"
+            android:theme="@style/Alp.Theme.Dark" >
+        </activity>
 
-    <activity
-        android:name=".PatternLock.SetPatternActivity"
-        android:label="@string/set_pattern_title"
-       >
-        <meta-data
-            android:name="android.support.PARENT_ACTIVITY"
-            android:value=".PatternLock.PatternLockActivity" />
-    </activity>
 
-    <activity
-        android:name=".PatternLock.ConfirmPatternActivity"
-        android:label="@string/confirm_pattern_title"
-        />
-
-    <activity
-        android:name=".PatternLock.ResetPatternActivity"
-        android:label="@string/reset_pattern_title"
-        />
-
-    <activity
-        android:name=".PatternLock.AboutActivity"
-        android:label="@string/about_title"
-        />
 </application>
 </manifest>

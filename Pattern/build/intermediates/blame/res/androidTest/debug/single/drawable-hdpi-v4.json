@@ -1,0 +1,46 @@
+[
+    {
+        "merged": "C:\\Users\\syeda\\Documents\\ScreenLock\\Pattern\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\alp_indicator_code_lock_point_area_default_holo_dark.png",
+        "source": "C:\\Users\\syeda\\Documents\\ScreenLock\\Pattern\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\alp_indicator_code_lock_point_area_default_holo_dark.png"
+    },
+    {
+        "merged": "C:\\Users\\syeda\\Documents\\ScreenLock\\Pattern\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\alp_btn_code_lock_touched_holo_dark.png",
+        "source": "C:\\Users\\syeda\\Documents\\ScreenLock\\Pattern\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\alp_btn_code_lock_touched_holo_dark.png"
+    },
+    {
+        "merged": "C:\\Users\\syeda\\Documents\\ScreenLock\\Pattern\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aosp_indicator_code_lock_point_area_red_holo.png",
+        "source": "C:\\Users\\syeda\\Documents\\ScreenLock\\Pattern\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aosp_indicator_code_lock_point_area_red_holo.png"
+    },
+    {
+        "merged": "C:\\Users\\syeda\\Documents\\ScreenLock\\Pattern\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\alp_btn_code_lock_default_holo_light.png",
+        "source": "C:\\Users\\syeda\\Documents\\ScreenLock\\Pattern\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\alp_btn_code_lock_default_holo_light.png"
+    },
+    {
+        "merged": "C:\\Users\\syeda\\Documents\\ScreenLock\\Pattern\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aosp_dialog_full_holo_dark.9.png",
+        "source": "C:\\Users\\syeda\\Documents\\ScreenLock\\Pattern\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aosp_dialog_full_holo_dark.9.png"
+    },
+    {
+        "merged": "C:\\Users\\syeda\\Documents\\ScreenLock\\Pattern\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\alp_btn_code_lock_touched_holo_light.png",
+        "source": "C:\\Users\\syeda\\Documents\\ScreenLock\\Pattern\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\alp_btn_code_lock_touched_holo_light.png"
+    },
+    {
+        "merged": "C:\\Users\\syeda\\Documents\\ScreenLock\\Pattern\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aosp_dialog_full_holo_light.9.png",
+        "source": "C:\\Users\\syeda\\Documents\\ScreenLock\\Pattern\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aosp_dialog_full_holo_light.9.png"
+    },
+    {
+        "merged": "C:\\Users\\syeda\\Documents\\ScreenLock\\Pattern\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\alp_indicator_code_lock_point_area_default_holo_light.png",
+        "source": "C:\\Users\\syeda\\Documents\\ScreenLock\\Pattern\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\alp_indicator_code_lock_point_area_default_holo_light.png"
+    },
+    {
+        "merged": "C:\\Users\\syeda\\Documents\\ScreenLock\\Pattern\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aosp_indicator_code_lock_point_area_blue_holo.png",
+        "source": "C:\\Users\\syeda\\Documents\\ScreenLock\\Pattern\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aosp_indicator_code_lock_point_area_blue_holo.png"
+    },
+    {
+        "merged": "C:\\Users\\syeda\\Documents\\ScreenLock\\Pattern\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\alp_btn_code_lock_default_holo_dark.png",
+        "source": "C:\\Users\\syeda\\Documents\\ScreenLock\\Pattern\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\alp_btn_code_lock_default_holo_dark.png"
+    },
+    {
+        "merged": "C:\\Users\\syeda\\Documents\\ScreenLock\\Pattern\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aosp_indicator_code_lock_point_area_green_holo.png",
+        "source": "C:\\Users\\syeda\\Documents\\ScreenLock\\Pattern\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aosp_indicator_code_lock_point_area_green_holo.png"
+    }
+]

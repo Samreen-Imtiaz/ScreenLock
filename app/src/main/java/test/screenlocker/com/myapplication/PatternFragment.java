@@ -15,12 +15,9 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import test.screenlocker.com.myapplication.PatternLock.PatternLockActivity;
-import test.screenlocker.com.myapplication.PatternLock.ResetPatternActivity;
-import test.screenlocker.com.myapplication.PatternLock.SetPatternActivity;
-
 import static android.app.Activity.RESULT_FIRST_USER;
 
+import group.pals.android.lib.ui.pattern.LockPatternActivity;
 public class PatternFragment extends Fragment
 {
     private static final int _ReqCreatePattern = 1;
@@ -28,17 +25,19 @@ public class PatternFragment extends Fragment
     public static final int _ResultFailed = RESULT_FIRST_USER + 1;
 
     SharedPreferences invisibleSetting;
-    private static final String _confirm_started = PatternLockActivity.class
+    private static final String _ClassName = LockPatternActivity.class
             .getName();
 
 
-    private static String _ClassName;
-    public static final String _ActionCreatePattern = _confirm_started
+    public static final String _ActionCreatePattern = _ClassName
             + ".create_pattern";
-    public static final String _ActionComparePattern = _confirm_started
+    public static final String _ActionComparePattern = _ClassName
             + ".compare_pattern";
-    public static final String _Pattern = _confirm_started + ".pattern";
-    public static final String _ExtraRetryCount = _confirm_started + ".retry_count";
+    public static final String _Pattern = _ClassName + ".pattern";
+    public static final String _ExtraRetryCount = _ClassName + ".retry_count";
+
+
+
 
     public Intent intent;
     private static String pattern;
@@ -55,16 +54,11 @@ public class PatternFragment extends Fragment
     String[] itemname ={
             "Create Pattern",
             "Change Pattern",
-
-
     };
 
     Integer[] imgid={
             R.drawable.ic_pen,
             R.drawable.ic_pin,
-
-
-
     };
 
 
@@ -204,13 +198,13 @@ public class PatternFragment extends Fragment
 
                 switch (position) {
                     case 0:
-                        intent = new Intent(
-                                getActivity(), ResetPatternActivity.class);
-                       startActivityForResult(intent, _ReqCreatePattern);
+                        intent = new Intent(_ActionCreatePattern, null,
+                                getActivity(), LockPatternActivity.class);
+                        startActivityForResult(intent, _ReqCreatePattern);
                         break;
                     case 1:
                         intent = new Intent(_ActionCreatePattern, null,
-                                getActivity(), SetPatternActivity.class);
+                                getActivity(), LockPatternActivity.class);
                         startActivityForResult(intent, _ReqCreatePattern);
                         break;
 
@@ -218,15 +212,8 @@ public class PatternFragment extends Fragment
 
             }
         });
-
-
-
         return v;
     }
-
-
-
-
     @Override
     public void onActivityCreated(Bundle savedInstanceState)
     {
@@ -250,4 +237,5 @@ public class PatternFragment extends Fragment
     {
         super.onResume();
     }
+
 }

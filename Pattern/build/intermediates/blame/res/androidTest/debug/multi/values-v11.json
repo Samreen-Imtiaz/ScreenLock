@@ -1,0 +1,167 @@
+[
+    {
+        "outputFile": "C:\\Users\\syeda\\Documents\\ScreenLock\\Pattern\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-v11\\values-v11.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 73,
+                    "endOffset": 124
+                },
+                "from": {
+                    "file": "C:\\Users\\syeda\\Documents\\ScreenLock\\Pattern\\build\\intermediates\\bundles\\debug\\res\\values-v11\\values-v11.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 73,
+                        "endOffset": 124
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 129,
+                    "endColumn": 87,
+                    "endOffset": 212
+                },
+                "from": {
+                    "file": "C:\\Users\\syeda\\Documents\\ScreenLock\\Pattern\\build\\intermediates\\bundles\\debug\\res\\values-v11\\values-v11.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 129,
+                        "endColumn": 87,
+                        "endOffset": 212
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 217,
+                    "endColumn": 94,
+                    "endOffset": 307
+                },
+                "from": {
+                    "file": "C:\\Users\\syeda\\Documents\\ScreenLock\\Pattern\\build\\intermediates\\bundles\\debug\\res\\values-v11\\values-v11.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 217,
+                        "endColumn": 94,
+                        "endOffset": 307
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 312,
+                    "endColumn": 80,
+                    "endOffset": 388
+                },
+                "from": {
+                    "file": "C:\\Users\\syeda\\Documents\\ScreenLock\\Pattern\\build\\intermediates\\bundles\\debug\\res\\values-v11\\values-v11.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 312,
+                        "endColumn": 80,
+                        "endOffset": 388
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 393,
+                    "endLine": 9,
+                    "endColumn": 12,
+                    "endOffset": 649
+                },
+                "from": {
+                    "file": "C:\\Users\\syeda\\Documents\\ScreenLock\\Pattern\\build\\intermediates\\bundles\\debug\\res\\values-v11\\values-v11.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 393,
+                        "endLine": 9,
+                        "endColumn": 12,
+                        "endOffset": 649
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 654,
+                    "endLine": 13,
+                    "endColumn": 12,
+                    "endOffset": 924
+                },
+                "from": {
+                    "file": "C:\\Users\\syeda\\Documents\\ScreenLock\\Pattern\\build\\intermediates\\bundles\\debug\\res\\values-v11\\values-v11.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 654,
+                        "endLine": 13,
+                        "endColumn": 12,
+                        "endOffset": 924
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 929,
+                    "endLine": 17,
+                    "endColumn": 12,
+                    "endOffset": 1201
+                },
+                "from": {
+                    "file": "C:\\Users\\syeda\\Documents\\ScreenLock\\Pattern\\build\\intermediates\\bundles\\debug\\res\\values-v11\\values-v11.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 929,
+                        "endLine": 17,
+                        "endColumn": 12,
+                        "endOffset": 1201
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 18,
+                    "startColumn": 4,
+                    "startOffset": 1206,
+                    "endLine": 21,
+                    "endColumn": 12,
+                    "endOffset": 1464
+                },
+                "from": {
+                    "file": "C:\\Users\\syeda\\Documents\\ScreenLock\\Pattern\\build\\intermediates\\bundles\\debug\\res\\values-v11\\values-v11.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 1206,
+                        "endLine": 21,
+                        "endColumn": 12,
+                        "endOffset": 1464
+                    }
+                }
+            }
+        ]
+    }
+]

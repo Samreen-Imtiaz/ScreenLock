@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "C:\\Users\\syeda\\Documents\\ScreenLock\\Pattern\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\alp_lock_pattern_view.xml",
+        "source": "C:\\Users\\syeda\\Documents\\ScreenLock\\Pattern\\build\\intermediates\\bundles\\debug\\res\\layout\\alp_lock_pattern_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\syeda\\Documents\\ScreenLock\\Pattern\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\alp_lock_pattern_activity.xml",
+        "source": "C:\\Users\\syeda\\Documents\\ScreenLock\\Pattern\\build\\intermediates\\bundles\\debug\\res\\layout\\alp_lock_pattern_activity.xml"
+    },
+    {
+        "merged": "C:\\Users\\syeda\\Documents\\ScreenLock\\Pattern\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\alp_lock_pattern_activity_land.xml",
+        "source": "C:\\Users\\syeda\\Documents\\ScreenLock\\Pattern\\build\\intermediates\\bundles\\debug\\res\\layout\\alp_lock_pattern_activity_land.xml"
+    }
+]
