@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Alp.BaseTheme.Dark" parent="@android:style/Theme.DeviceDefault"/>
+    <style name="Alp.BaseTheme.Dialog.Dark" parent="@android:style/Theme.DeviceDefault.Dialog"/>
+    <style name="Alp.BaseTheme.Dialog.Light" parent="@android:style/Theme.DeviceDefault.Light.Dialog"/>
+    <style name="Alp.BaseTheme.Light" parent="@android:style/Theme.DeviceDefault.Light"/>
+</resources>

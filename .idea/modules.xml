@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/Pattern/Pattern.iml" filepath="$PROJECT_DIR$/Pattern/Pattern.iml" />
       <module fileurl="file://$PROJECT_DIR$/Pin/Pin.iml" filepath="$PROJECT_DIR$/Pin/Pin.iml" />
       <module fileurl="file://$PROJECT_DIR$/ScreenLock.iml" filepath="$PROJECT_DIR$/ScreenLock.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Screen_Lock.iml" filepath="$PROJECT_DIR$/Screen_Lock.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
