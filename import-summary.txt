@@ -1,0 +1,141 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+* LICENSE
+* NOTICE
+* build.xml
+* code\
+* code\.classpath
+* code\.project
+* code\AndroidManifest.xml
+* code\build.xml
+* code\proguard.cfg
+* code\project.properties
+* code\res\
+* code\res\drawable-hdpi\
+* code\res\drawable-hdpi\alp_btn_code_lock_default_holo_dark.png
+* code\res\drawable-hdpi\alp_btn_code_lock_default_holo_light.png
+* code\res\drawable-hdpi\alp_btn_code_lock_touched_holo_dark.png
+* code\res\drawable-hdpi\alp_btn_code_lock_touched_holo_light.png
+* code\res\drawable-hdpi\alp_indicator_code_lock_point_area_default_holo_dark.png
+* code\res\drawable-hdpi\alp_indicator_code_lock_point_area_default_holo_light.png
+* code\res\drawable-hdpi\aosp_dialog_full_holo_dark.9.png
+* code\res\drawable-hdpi\aosp_dialog_full_holo_light.9.png
+* code\res\drawable-hdpi\aosp_indicator_code_lock_point_area_blue_holo.png
+* code\res\drawable-hdpi\aosp_indicator_code_lock_point_area_green_holo.png
+* code\res\drawable-hdpi\aosp_indicator_code_lock_point_area_red_holo.png
+* code\res\drawable-mdpi\
+* code\res\drawable-mdpi\alp_btn_code_lock_default_holo_dark.png
+* code\res\drawable-mdpi\alp_btn_code_lock_default_holo_light.png
+* code\res\drawable-mdpi\alp_btn_code_lock_touched_holo_dark.png
+* code\res\drawable-mdpi\alp_btn_code_lock_touched_holo_light.png
+* code\res\drawable-mdpi\alp_indicator_code_lock_point_area_default_holo_dark.png
+* code\res\drawable-mdpi\alp_indicator_code_lock_point_area_default_holo_light.png
+* code\res\drawable-mdpi\aosp_dialog_full_holo_dark.9.png
+* code\res\drawable-mdpi\aosp_dialog_full_holo_light.9.png
+* code\res\drawable-mdpi\aosp_indicator_code_lock_point_area_blue_holo.png
+* code\res\drawable-mdpi\aosp_indicator_code_lock_point_area_green_holo.png
+* code\res\drawable-mdpi\aosp_indicator_code_lock_point_area_red_holo.png
+* code\res\drawable-nodpi\
+* code\res\drawable-nodpi\aosp_background_holo_dark.png
+* code\res\drawable-nodpi\aosp_background_holo_light.png
+* code\res\drawable-nodpi\aosp_indicator_code_lock_drag_direction_green_up.png
+* code\res\drawable-nodpi\aosp_indicator_code_lock_drag_direction_red_up.png
+* code\res\drawable-xhdpi\
+* code\res\drawable-xhdpi\alp_btn_code_lock_default_holo_dark.png
+* code\res\drawable-xhdpi\alp_btn_code_lock_default_holo_light.png
+* code\res\drawable-xhdpi\alp_btn_code_lock_touched_holo_dark.png
+* code\res\drawable-xhdpi\alp_btn_code_lock_touched_holo_light.png
+* code\res\drawable-xhdpi\alp_indicator_code_lock_point_area_default_holo_dark.png
+* code\res\drawable-xhdpi\alp_indicator_code_lock_point_area_default_holo_light.png
+* code\res\drawable-xhdpi\aosp_dialog_full_holo_dark.9.png
+* code\res\drawable-xhdpi\aosp_dialog_full_holo_light.9.png
+* code\res\drawable-xhdpi\aosp_indicator_code_lock_point_area_blue_holo.png
+* code\res\drawable-xhdpi\aosp_indicator_code_lock_point_area_green_holo.png
+* code\res\drawable-xhdpi\aosp_indicator_code_lock_point_area_red_holo.png
+* code\res\layout-v14\
+* code\res\layout-v14\alp_lock_pattern_view.xml
+* code\res\layout\
+* code\res\layout\alp_lock_pattern_activity.xml
+* code\res\layout\alp_lock_pattern_activity_land.xml
+* code\res\layout\alp_lock_pattern_view.xml
+* code\res\values-es\
+* code\res\values-es\strings.xml
+* code\res\values-land\
+* code\res\values-land\layouts.xml
+* code\res\values-large-land\
+* code\res\values-large-land\dimens.xml
+* code\res\values-large\
+* code\res\values-large\dimens.xml
+* code\res\values-large\env.xml
+* code\res\values-sw600dp-land\
+* code\res\values-sw600dp-land\dimens.xml
+* code\res\values-sw600dp\
+* code\res\values-sw600dp\dimens.xml
+* code\res\values-sw600dp\env.xml
+* code\res\values-v11\
+* code\res\values-v11\styles.xml
+* code\res\values-v14\
+* code\res\values-v14\styles.xml
+* code\res\values-vi\
+* code\res\values-vi\strings.xml
+* code\res\values-xlarge-land\
+* code\res\values-xlarge-land\dimens.xml
+* code\res\values\
+* code\res\values\colors.xml
+* code\res\values\dimens.xml
+* code\res\values\drawables.xml
+* code\res\values\env.xml
+* code\res\values\strings.xml
+* code\res\values\styles.xml
+* code\src\
+* code\src\group\
+* code\src\group\pals\
+* code\src\group\pals\android\
+* code\src\group\pals\android\lib\
+* code\src\group\pals\android\lib\ui\
+* code\src\group\pals\android\lib\ui\lockpattern\
+* code\src\group\pals\android\lib\ui\lockpattern\LockPatternActivity.java
+* code\src\group\pals\android\lib\ui\lockpattern\collect\
+* code\src\group\pals\android\lib\ui\lockpattern\collect\Lists.java
+* code\src\group\pals\android\lib\ui\lockpattern\util\
+* code\src\group\pals\android\lib\ui\lockpattern\util\IEncrypter.java
+* code\src\group\pals\android\lib\ui\lockpattern\util\InvalidEncrypterException.java
+* code\src\group\pals\android\lib\ui\lockpattern\util\UI.java
+* code\src\group\pals\android\lib\ui\lockpattern\widget\
+* code\src\group\pals\android\lib\ui\lockpattern\widget\LockPatternUtils.java
+* code\src\group\pals\android\lib\ui\lockpattern\widget\LockPatternView.java
+* code\src\group\pals\android\lib\ui\lockpattern\widget\LockPatternViewCompat.java
+* code\src\group\pals\android\lib\ui\lockpattern\widget\LockPatternView_v14.java
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+* AndroidManifest.xml => androidlockpattern\src\main\AndroidManifest.xml
+* assets\ => androidlockpattern\src\main\assets
+* proguard.cfg => androidlockpattern\proguard.cfg
+* res\ => androidlockpattern\src\main\res\
+* src\ => androidlockpattern\src\main\java\
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)
