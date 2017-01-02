@@ -86,7 +86,7 @@
              >
         </activity>
 
-
+<activity android:name=".DisplayImage"></activity>
         <activity
             android:name=".UnlockPattern"
             android:theme="@style/AppTheme" >

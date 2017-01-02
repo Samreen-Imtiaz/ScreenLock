@@ -1,6 +1,6 @@
 package test.screenlocker.com.myapplication;
 import java.io.IOException;
- 
+
 import android.app.WallpaperManager;
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -11,10 +11,11 @@ public class HeavyLifter {
  
     public static final int SUCCESS = 0;
     public static final int FAIL = 1;
- 
+
     private final Context context;
     private final Handler callback;
     private WallpaperManager manager;
+
 
     public HeavyLifter(Context context, Handler callback) {
         this.context = context;
@@ -29,6 +30,7 @@ public class HeavyLifter {
             @Override
             public void run() {
                 try {
+
                     manager.setBitmap(getImage(resourceId));
                     callback.sendEmptyMessage(SUCCESS);
                 } catch (IOException e) {
