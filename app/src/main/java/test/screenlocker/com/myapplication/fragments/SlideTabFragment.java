@@ -56,6 +56,7 @@ public class SlideTabFragment extends Fragment {
         t4 = (TextView) rootView.findViewById(R.id.FAQ);
         imageView = (ImageView) rootView.findViewById(R.id.imageView2);
         btnImage = (Button) rootView.findViewById(R.id.button);
+
         String u=prefs.getStringPreferences(PreferencesConstants.image);
         btmap=decodeBase64(u);
         imageView.setImageBitmap(btmap);

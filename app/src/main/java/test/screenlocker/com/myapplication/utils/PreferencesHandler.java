@@ -46,6 +46,7 @@ public class PreferencesHandler {
 
     }
 
+
     public static void updatePreferences(String key, float value) {
         SharedPreferences settings = context.getSharedPreferences(FILE_NAME_SHARED_PREF, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = settings.edit();
@@ -120,6 +121,7 @@ public class PreferencesHandler {
         return BitmapFactory
                 .decodeByteArray(decodedByte, 0, decodedByte.length);
     }
+
 
 
 }

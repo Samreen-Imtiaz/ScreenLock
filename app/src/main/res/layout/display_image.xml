@@ -17,27 +17,27 @@
         android:orientation="horizontal"
         >
 
-        <Button
+      <!--  <Button
             android:layout_width="0dip"
             android:layout_height="wrap_content"
             android:layout_weight="25"
             android:id="@+id/mov"
-            android:text="&lt;" />
+            android:text="&lt;" /> -->
 
         <Button
             android:layout_width="0dip"
             android:layout_height="wrap_content"
-            android:layout_weight="50"
+            android:layout_weight="173.87"
             android:id="@+id/background"
             android:padding="10dip"
             android:text="Set Wallpaper" />
 
-        <Button
+    <!--    <Button
             android:layout_width="0dip"
             android:layout_height="wrap_content"
             android:layout_weight="25"
             android:id="@+id/move"
-            android:text=">" />
+            android:text=">" /> -->
     </LinearLayout>
 
     <ImageView
