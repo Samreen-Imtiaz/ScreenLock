@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\syeda\\Documents\\ScreenLock\\Pattern\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\aosp_indicator_code_lock_point_area_red_holo.png",
-        "source": "C:\\Users\\syeda\\Documents\\ScreenLock\\Pattern\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\aosp_indicator_code_lock_point_area_red_holo.png"
-    },
-    {
         "merged": "C:\\Users\\syeda\\Documents\\ScreenLock\\Pattern\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\aosp_dialog_full_holo_dark.9.png",
         "source": "C:\\Users\\syeda\\Documents\\ScreenLock\\Pattern\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\aosp_dialog_full_holo_dark.9.png"
+    },
+    {
+        "merged": "C:\\Users\\syeda\\Documents\\ScreenLock\\Pattern\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\aosp_indicator_code_lock_point_area_red_holo.png",
+        "source": "C:\\Users\\syeda\\Documents\\ScreenLock\\Pattern\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\aosp_indicator_code_lock_point_area_red_holo.png"
     },
     {
         "merged": "C:\\Users\\syeda\\Documents\\ScreenLock\\Pattern\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\alp_indicator_code_lock_point_area_default_holo_light.png",

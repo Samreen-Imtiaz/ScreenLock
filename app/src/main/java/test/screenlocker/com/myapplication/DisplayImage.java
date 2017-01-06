@@ -30,18 +30,7 @@ import test.screenlocker.com.myapplication.utils.PreferencesHandler;
 
 public class DisplayImage extends Activity {
     private static final List<Integer> backgrounds = new ArrayList<Integer>();
-    int[] imageId = {
-            R.drawable.thumb1,
-            R.drawable.thumb2,
-            R.drawable.thumb3,
-            R.drawable.thumb4,
-            R.drawable.thumb5,
-            R.drawable.thumb6,
-            R.drawable.thumb7,
-            R.drawable.thumb8,
-    };
     int position;
-    protected static final String EXTRA_RES_ID = "POS";
 
     private int currentPosition = 0;
     private ImageView backgroundPreview;
@@ -49,7 +38,7 @@ public class DisplayImage extends Activity {
     PreferencesHandler prefs;
     Button display;
     Intent intent;
-    int index;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,8 +49,8 @@ public class DisplayImage extends Activity {
       //  changePreviewImage(currentPosition);
         chuckNorris = new HeavyLifter(this, chuckFinishedHandler);
         Bundle bdl=getIntent().getExtras();
-        index=bdl.getInt("Index");
-        backgroundPreview.setImageResource(PreferencesConstants.imageId[index]);
+        position=bdl.getInt("Index");
+        backgroundPreview.setImageResource(PreferencesConstants.imageId[position]);
         display.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -80,7 +69,8 @@ public class DisplayImage extends Activity {
     }*/
 
     public void setAsWallpaper(View v) {
-        int resourceId = backgrounds.get(PreferencesConstants.imageId[index]);
+      //  int resourceId = backgrounds.get(PreferencesConstants.imageId);
+        int resourceId = backgrounds.get(PreferencesConstants.imageId[position]);
         chuckNorris.setResourceAsWallpaper(resourceId);
 
     }

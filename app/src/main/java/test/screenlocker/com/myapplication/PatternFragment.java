@@ -14,10 +14,12 @@ import android.widget.ListView;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
+import group.pals.android.lib.ui.pattern.LockPatternActivity;
 
 import static android.app.Activity.RESULT_FIRST_USER;
 
-import group.pals.android.lib.ui.pattern.LockPatternActivity;
+import test.screenlocker.com.myapplication.PatternLock.LockPattern;
+
 public class PatternFragment extends Fragment
 {
     private static final int _ReqCreatePattern = 1;
@@ -198,14 +200,23 @@ public class PatternFragment extends Fragment
 
                 switch (position) {
                     case 0:
+                    //    intent = new Intent(_ActionCreatePattern, null,
+                    //            getActivity(), LockPattern.class);
+                    //    startActivityForResult(intent, _ReqCreatePattern);
                         intent = new Intent(_ActionCreatePattern, null,
-                                getActivity(), LockPatternActivity.class);
+                                getActivity(),LockPatternActivity.class);
                         startActivityForResult(intent, _ReqCreatePattern);
                         break;
                     case 1:
-                        intent = new Intent(_ActionCreatePattern, null,
-                                getActivity(), LockPatternActivity.class);
-                        startActivityForResult(intent, _ReqCreatePattern);
+                    //    intent = new Intent(_ActionCreatePattern, null,
+                    //            getActivity(), LockPattern.class);
+                   //     startActivityForResult(intent, _ReqCreatePattern);
+
+                        intent = new Intent(_ActionComparePattern,
+                                null, getActivity(), LockPatternActivity.class);
+                        pattern = invisibleSetting.getString("myPattern", pattern);
+                        intent.putExtra(_Pattern, pattern);
+                        startActivityForResult(intent, _ReqSignIn);
                         break;
 
                 }

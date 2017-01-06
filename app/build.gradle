@@ -33,4 +33,5 @@ dependencies {
     compile 'uk.me.lewisdeane.ldialogs:ldialogs:1.2.0@aar'
     compile project(':Pattern')
     compile files('libs/mail.jar')
+
 }

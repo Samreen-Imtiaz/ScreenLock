@@ -2,6 +2,7 @@ package test.screenlocker.com.myapplication;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -9,6 +10,10 @@ import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+
+import com.github.orangegangsters.lollipin.lib.managers.AppLock;
+
+import test.screenlocker.com.myapplication.PinLock.CustomPinActivity;
 
 
 public class UnlockPin extends Activity {
@@ -25,12 +30,12 @@ public class UnlockPin extends Activity {
 
             @Override
             public void onClick(View v) {
-                // TODO Auto-generated method stub
+                 //TODO Auto-generated method stub
 
-              //  Intent i = new Intent(UnlockPin.this,CustomPinActivity.class);
-             //   i.putExtra(AppLock.EXTRA_TYPE, AppLock.UNLOCK_PIN);
-             //   startActivity(i);
-             //   finish();
+                Intent i = new Intent(UnlockPin.this,CustomPinActivity.class);
+                i.putExtra(AppLock.EXTRA_TYPE, AppLock.UNLOCK_PIN);
+                startActivity(i);
+                finish();
             }
         });
     }

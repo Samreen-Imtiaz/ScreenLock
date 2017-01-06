@@ -1,5 +1,16 @@
 package group.pals.android.lib.ui.pattern;
 
+import group.pals.android.lib.ui.pattern.util.IEncrypter;
+import group.pals.android.lib.ui.pattern.util.InvalidEncrypterException;
+import group.pals.android.lib.ui.pattern.util.UI;
+import group.pals.android.lib.ui.pattern.widget.LockPatternUtils;
+import group.pals.android.lib.ui.pattern.widget.LockPatternView;
+import group.pals.android.lib.ui.pattern.widget.LockPatternView.Cell;
+import group.pals.android.lib.ui.pattern.widget.LockPatternView.DisplayMode;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import android.app.Activity;
 import android.app.PendingIntent;
 import android.content.Intent;
@@ -14,18 +25,6 @@ import android.view.View;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.Button;
 import android.widget.TextView;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import group.pals.android.lib.ui.pattern.util.IEncrypter;
-import group.pals.android.lib.ui.pattern.util.InvalidEncrypterException;
-import group.pals.android.lib.ui.pattern.util.UI;
-import group.pals.android.lib.ui.pattern.widget.LockPatternUtils;
-import group.pals.android.lib.ui.pattern.widget.LockPatternView;
-import group.pals.android.lib.ui.pattern.widget.LockPatternView.Cell;
-import group.pals.android.lib.ui.pattern.widget.LockPatternView.DisplayMode;
-import group.pals.android.lib.ui.pattern.R;
 
 /**
  * Main activity for this library.
@@ -260,7 +259,7 @@ public class LockPatternActivity extends Activity {
         if (mMinWiredDots <= 0 || mMinWiredDots > 9)
             mMinWiredDots = 4;
 
-        mMaxRetry = getIntent().getIntExtra(_MaxRetry, 3);
+        mMaxRetry = getIntent().getIntExtra(_MaxRetry, 5);
 
         /*
          * Set this to false by default, for security enhancement.

@@ -27,6 +27,7 @@ import android.util.Patterns;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.widget.Toast;
+import test.screenlocker.com.myapplication.UserFregment;
 
 import com.github.orangegangsters.lollipin.lib.managers.AppLockActivity;
 

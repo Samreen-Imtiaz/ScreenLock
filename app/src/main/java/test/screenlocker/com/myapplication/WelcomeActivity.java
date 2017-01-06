@@ -20,6 +20,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import test.screenlocker.com.myapplication.PatternLock.LockPattern;
 import test.screenlocker.com.myapplication.utils.PreferencesHandler;
 
 public class WelcomeActivity extends AppCompatActivity {
