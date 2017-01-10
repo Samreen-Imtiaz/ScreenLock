@@ -38,12 +38,12 @@ import static android.app.Activity.RESULT_OK;
 public class UserFregment extends Fragment {
     private EditText etEmailAddrss;
     private EditText etPhoneNumber;
-    private Button btnSubmit, btnclear,btnImage;
+    private Button btnSubmit, btnclear;
     TextView heading;
     View view;
     SlidingPaneLayout mSlidingLayout;
     ImageButton slidingPaneButton;
-    ImageView imageView;
+    ImageView imageView, btnImage;
     PreferencesHandler prefs;
     Bitmap btmap;
     private static int RESULT_LOAD_IMAGE = 1;
@@ -79,7 +79,7 @@ public class UserFregment extends Fragment {
         btnclear = (Button) view.findViewById(R.id.button3);
         btnSubmit = (Button) view.findViewById(R.id.button2);
        imageView = (ImageView) view.findViewById(R.id.imageView2);
-        btnImage = (Button) view.findViewById(R.id.image);
+        btnImage = (ImageView) view.findViewById(R.id.image);
         heading = (TextView) view.findViewById(R.id.textview);
         heading.setText("User Profile");
 

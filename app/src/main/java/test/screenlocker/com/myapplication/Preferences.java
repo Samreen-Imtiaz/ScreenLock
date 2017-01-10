@@ -8,6 +8,6 @@ public class Preferences extends Activity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.preference);
+        setContentView(R.layout.preferences);
     }
 }

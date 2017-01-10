@@ -17,7 +17,7 @@ public class ActivatePattern extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_activate_pattern);
-//makeFullScreen();
+//makeFullScreen();;
         Animation slideUp = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide_up);
 
         Button unlock = (Button) findViewById(R.id.unlockPattern);
