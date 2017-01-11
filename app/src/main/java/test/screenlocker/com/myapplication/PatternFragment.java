@@ -14,10 +14,10 @@ import android.widget.ListView;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
-import group.pals.android.lib.ui.pattern.LockPatternActivity;
 
 import static android.app.Activity.RESULT_FIRST_USER;
 
+import group.pals.android.lib.ui.lockpattern.LockPatternActivity;
 import test.screenlocker.com.myapplication.PatternLock.LockPattern;
 
 public class PatternFragment extends Fragment

@@ -5,7 +5,7 @@ android {
     buildToolsVersion "24.0.2"
     defaultConfig {
         applicationId "test.screenlocker.com.myapplication"
-        minSdkVersion 19
+        minSdkVersion 17
         targetSdkVersion 24
         versionCode 1
         versionName "1.0"
@@ -22,7 +22,6 @@ android {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
-    compile 'cn.gavinliu.android.lib:ShapedImageView:0.8.1'
     compile 'com.roughike:bottom-bar:1.2.1'
     compile 'com.android.support:appcompat-v7:24.2.1'
     compile 'com.android.support:recyclerview-v7:24.2.1'
@@ -30,8 +29,9 @@ dependencies {
     compile 'com.android.support:preference-v7:24.0.0'
     compile 'com.jakewharton:butterknife:8.2.1'
     compile project(':Pin')
+    compile 'de.hdodenhof:circleimageview:2.1.0'
     compile 'uk.me.lewisdeane.ldialogs:ldialogs:1.2.0@aar'
-    compile project(':Pattern')
+    compile project(':androidlockpattern')
     compile files('libs/mail.jar')
 
 }

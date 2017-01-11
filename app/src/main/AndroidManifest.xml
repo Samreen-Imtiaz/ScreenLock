@@ -139,7 +139,7 @@
         </activity>
 
         <activity
-            android:name="group.pals.android.lib.ui.pattern.LockPatternActivity"
+            android:name="group.pals.android.lib.ui.lockpattern.LockPatternActivity"
             android:configChanges="orientation|screenSize|keyboard|keyboardHidden"
             android:screenOrientation="user"
             android:theme="@style/Alp.Theme.Dark" >

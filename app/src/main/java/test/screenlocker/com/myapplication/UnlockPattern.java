@@ -12,7 +12,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 
-import group.pals.android.lib.ui.pattern.LockPatternActivity;
+import group.pals.android.lib.ui.lockpattern.LockPatternActivity;
 
 
 public class UnlockPattern extends Activity {

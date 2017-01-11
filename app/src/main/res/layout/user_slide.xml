@@ -2,68 +2,76 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/border_grey">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <include
+        android:id="@id/headerLayout"
+        layout="@layout/main_header" />
 
-    <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/ic_action_user"
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_below="@id/headerLayout"
+        android:id="@+id/imageView3"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:civ_border_width="1dp"
+        app:civ_border_color="@color/colorPrimary"
+        android:scaleType="centerCrop"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
-        android:id="@+id/imageView3"/>
-    <TextView
-        android:layout_width="wrap_content"
+        android:src="@drawable/avatar" />
+
+    <EditText
+        android:id="@+id/editText6"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:textSize="30dp"
-        android:text="User Profile"
         android:layout_below="@+id/imageView3"
         android:layout_centerHorizontal="true"
-        android:id="@+id/txt"/>
-
-    <EditText
-        android:layout_width="250dp"
-        android:layout_height="38dp"
-        android:id="@+id/editText6"
-        android:background="@android:color/white"
         android:hint="@string/lbl_num"
-        android:layout_below="@+id/txt"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="21dp"
-        android:inputType="number"/>
+        android:layout_marginTop="10dp"
+        android:inputType="number" />
 
     <EditText
-        android:layout_width="250dp"
-        android:layout_height="38dp"
         android:id="@+id/editText7"
-        android:background="@android:color/white"
-        android:hint="@string/lbl_email"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/editText6"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="21dp"
-        android:inputType="textEmailAddress"/>
+        android:layout_marginTop="10dp"
+        android:hint="@string/lbl_email"
+        android:inputType="textEmailAddress" />
 
     <Button
         android:id="@+id/button4"
-        android:layout_width="100dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:textColor="@color/white"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/button"
         android:text="Save"
-        android:background="@color/bb_inActiveBottomBarItemColor"
-        android:layout_below="@+id/editText7"
-        android:layout_alignStart="@+id/editText7"
-        android:layout_marginTop="24dp" />
-
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:text="Skip"
         android:textColor="@color/white"
-        android:background="@color/bb_inActiveBottomBarItemColor"
-        android:layout_alignBaseline="@+id/button4"
-        android:layout_alignBottom="@+id/button4"
-        android:layout_alignEnd="@+id/editText7" />
+        android:layout_below="@+id/editText7"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Skip"
+        android:layout_width="100dp"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        android:id="@+id/textView13" />
+
+    <TextView
+        android:text="Add Photo"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editText6"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="17dp"
+        android:id="@+id/textView14" />
 
     <!--<Button
         android:id="@id/button4"

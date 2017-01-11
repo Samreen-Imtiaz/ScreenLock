@@ -1,6 +1,6 @@
 package test.screenlocker.com.myapplication.PatternLock;
 
-import group.pals.android.lib.ui.pattern.LockPatternActivity;
+import group.pals.android.lib.ui.lockpattern.LockPatternActivity;
 import test.screenlocker.com.myapplication.R;
 
 import android.app.Activity;
